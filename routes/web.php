@@ -38,14 +38,6 @@ Route::group(['middleware' => ['admin'], 'prefix'=>'admin'], function () {
     Route::get('profile', [ProfileController::class, 'index'])->name('admin.profile');
     Route::post('profile/update', [ProfileController::class, 'profileUpdate'])->name('admin.profile.update');
     Route::get('logout', [AuthController::class, 'logout'])->name('admin.logout');
-
-    Route::prefix('detail')->group(function () {
-        Route::get('/',[AdminController::class,'index'])->name('admin.index');
-        Route::post('/store',[AdminController::class,'store'])->name('admin.store');
-        Route::post('/edit/{id}', [AdminController::class, 'edit'])->name('admin.edit');
-        Route::get('/delete/{id}', [AdminController::class, 'delete'])->name('admin.delete');
-        Route::post('/update',[AdminController::class, 'update'])->name('admin.update'); 
-    });   
     
     Route::prefix('password')->group(function () {
         Route::get('/', [ProfileController::class, 'password'])->name('admin.password'); // password change
@@ -54,7 +46,6 @@ Route::group(['middleware' => ['admin'], 'prefix'=>'admin'], function () {
 
     Route::resources([
         'customers' => CustomerController::class,
-        'sellers' => SellerController::class,
     ]);
     //  Customer Routes
     Route::prefix('customers')->group(function () {
@@ -62,10 +53,5 @@ Route::group(['middleware' => ['admin'], 'prefix'=>'admin'], function () {
     });
     Route::get('/changeCustomerStatus', [CustomerController::class, 'changeCustomersStatus'])->name('customers.change-status');
 
-    // Seller Routes
-    Route::get('/changeSellerStatus', [SellerController::class, 'changeSellersStatus'])->name('sellers.change-status');
-    Route::prefix('sellers')->group(function () {
-        Route::get('/seller-delete/{id}', [SellerController::class, 'delete'])->name('sellers.delete');
-    });
 
 });

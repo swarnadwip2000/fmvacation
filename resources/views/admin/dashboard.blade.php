@@ -63,8 +63,8 @@
                             <div class="card-body">
                                 <span class="dash-widget-icon"><i class="fa fa-user"></i></span>
                                 <div class="dash-widget-info">
-                                    <h3>{{ $count['customer'] }}</h3>
-                                    <span>Total Customer</span>
+                                    <h3>{{ $count['user'] }}</h3>
+                                    <span>Total user</span>
                                 </div>
                             </div>
                         </div>

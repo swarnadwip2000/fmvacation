@@ -26,12 +26,10 @@
                     </ul>
                 </li>
                 <li class="{{ Request::is('admin/customers*') ? 'active' : ' ' }}">
-                    <a href="{{ route('customers.index') }}" ><i class="la la-users"></i> <span>Manage Customers</span></a>                 
+                    <a href="{{ route('customers.index') }}" ><i class="la la-users"></i> <span>Manage User</span></a>                 
                 </li>
 
-                <li class="{{ Request::is('admin/sellers*') ? 'active' : ' ' }}">
-                    <a href="{{ route('sellers.index') }}" ><i class="la la-user"></i> <span>Manage Sellers</span></a>                 
-                </li>
+            
                 
 
                 {{-- <li class="{{ Request::is('admin/members*') ? 'active' : ' ' }}">
