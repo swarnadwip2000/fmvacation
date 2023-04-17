@@ -1,0 +1,1544 @@
+.Section1 {
+    display: flex
+}
+
+.Section1 .Left {
+    width: 66%;
+    margin-right: 80px
+}
+
+.Section1 .Left .Row {
+    display: flex;
+    align-items: center
+}
+
+.Section1 .Left .Row .Image img {
+    width: 100%
+}
+
+.Section1 .Left .Row1 {
+    justify-content: flex-end;
+    margin-top: -100px
+}
+
+.Section1 .Left .Row2 {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-top: -20px
+}
+
+.Section1 .Left .Row .Text {
+    font-size: 16px;
+    color: var(--dark_blue);
+    line-height: 33px
+}
+
+.Section1 .Left .Row1 .Text {
+    text-align: right;
+    margin-right: 30px
+}
+
+.Section1 .Left .Row2 .Text {
+    text-align: left;
+    margin-left: 30px
+}
+
+.Section1 .Right {
+    width: 33%;
+    margin-top: 74px
+}
+
+.Section1 .Right .P1 p {
+    color: #777;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 27px
+}
+
+.Section1 .Right .P1::before {
+    border-top: 8px solid #d6d6d6;
+    content: '';
+    display: block;
+    width: 85px;
+    margin-bottom: 30px;
+    line-height: 27px
+}
+
+.Section1 .Right .P2 {
+    color: var(--dark_blue);
+    font-size: 16px;
+    font-style: italic;
+    margin: 45px 0;
+    line-height: 27px
+}
+
+.Section1 .Right .P3 p {
+    color: var(--dark_blue);
+    font-size: 16px;
+    line-height: 27px
+}
+
+.Section1 .Right .P3 .Quotes {
+    display: none
+}
+
+.Section1 .Right .P3 .Quotes img {
+    visibility: hidden
+}
+
+.Section2 {
+    text-align: center;
+    margin: 50px auto;
+    position: relative
+}
+
+.Section2 .Title {
+    margin: 27px 0
+}
+
+.Section2 .Title h2 {
+    font-size: 35px;
+    color: var(--dark_blue);
+    font-weight: 400;
+    font-family: rancho
+}
+
+.Section2 .Image {
+    width: 100%
+}
+
+.Section2 .Image img {
+    width: 100%
+}
+
+.Section2 .DottedLine {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-left: -60px;
+    height: 100%
+}
+
+.Section2 .DottedLine img {
+    height: 100%
+}
+
+.Section3 {
+    text-align: center;
+    margin: 100px auto
+}
+
+.Section3 .Title {
+    margin: 22px 0
+}
+
+.Section3 .Title h2 {
+    color: var(--dark_blue);
+    font-size: 30px;
+    font-weight: 500
+}
+
+.Section3 .SubTitle h3 {
+    color: var(--dark_blue);
+    font-size: 16px;
+    font-weight: 300
+}
+
+.Section3 .Text {
+    display: flex
+}
+
+.Section3 .Text p {
+    color: var(--dark_blue);
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+    width: 50%
+}
+
+.Section3 .Text p::before {
+    border-top: 8px solid #d6d6d6;
+    content: '';
+    display: block;
+    width: 85px;
+    margin: 30px 0;
+    line-height: 27px
+}
+
+.Section3 .Team {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around
+}
+
+.Section3 .Text p:nth-child(1) {
+    margin-right: 50px
+}
+
+.Section3 .Text p:nth-child(2) {
+    margin-left: 50px
+}
+
+.Section3 .Team .Member {
+    width: 25%;
+    float: left;
+    padding: 20px;
+    color: var(--dark_blue);
+    font-size: 14px;
+    line-height: 14px
+}
+
+.Section3 .Team .Member .Name {
+    font-weight: 700;
+    margin: 10px 0
+}
+
+.Section3 .Team .Member img {
+    width: 100%
+}
+
+.Section4 {
+    text-align: center;
+    background: var(--about_bg);
+    padding: 46px 20px;
+    border-radius: 26px
+}
+
+.Section4 .Badge img {
+    width: 50px
+}
+
+.Section4 .Title {
+    margin: 35px 0
+}
+
+.Section4 .Title h2 {
+    color: var(--dark_blue);
+    font-size: 20px;
+    font-weight: 300
+}
+
+.Section4 .Text p {
+    color: var(--dark_blue);
+    font-size: 16px;
+    font-weight: 300
+}
+
+.Section4 .Brands .Experiencegift img {
+    height: 43px;
+    vertical-align: bottom
+}
+
+.Section4 .Brands .Experiencegift span {
+    color: var(--dark_blue);
+    font-size: 16px;
+    display: inline-block;
+    line-height: 33px;
+    padding-left: 20px
+}
+
+.Section4 .Brands .Concepts {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: center
+}
+
+.Section4 .Brands .Concepts div {
+    margin: 20px
+}
+
+.Section4 .Values {
+    display: flex;
+    align-items: space-between
+}
+
+.Section4 .Values .Circle {
+    border-radius: 100%;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    text-align: center
+}
+
+.Section4 .Values .Circle .Title {
+    width: 100%;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400
+}
+
+.Section4 .Trust,
+.Section4 .Care,
+.Section4 .Growth,
+.Section4 .Experience,
+.Section4 .Experience,
+.Section4 .Love {
+    position: relative;
+    display: flex;
+    align-items: center
+}
+
+.Section4 .Values {
+    height: 540px;
+    max-width: 1385px;
+    margin: 50px auto
+}
+
+.Section4 .Values .Text {
+    margin: 26px;
+    color: #404040;
+    font-weight: 300;
+    font-size: 16px
+}
+
+.Section4 .Circle {
+    background-size: cover !important;
+    background-repeat: none !important
+}
+
+.Section5 {
+    text-align: center;
+    margin: 100px auto
+}
+
+.Section5 .Title h2 {
+    font-size: 30;
+    text-transform: uppercase;
+    color: var(--dark_blue);
+    font-weight: 400;
+    margin: 10px 0
+}
+
+.Section5 .Title .Badge img {
+    height: 60px
+}
+
+.Section5 .Image {
+    margin: 50px 0
+}
+
+.Section5 .Image,
+.Section5 .Image img {
+    width: 100%
+}
+
+.Section6 {
+    margin-top: 100px;
+    padding-top: 100px;
+    background-repeat: no-repeat !important;
+    background-size: cover !important
+}
+
+.Section6 {
+    text-align: center
+}
+
+.Section6 .Title {
+    text-align: center
+}
+
+.Section6 .Title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--dark_blue);
+    font-weight: 400
+}
+
+.Section6 .Title h3 {
+    font-size: 18px;
+    color: var(--dark_blue);
+    font-weight: 300;
+    line-height: 33px;
+    margin: 33px 0
+}
+
+.Section6 .Giftcards .Title {
+    color: var(--main_color);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px
+}
+
+.Section6 .Giftcards {
+    display: flex;
+    padding: 50px;
+    justify-content: center
+}
+
+.Section6 .Giftcard {
+    width: 33.3%
+}
+
+.Section6 .Giftcard .Image {
+    padding: 0 20px;
+    width: 100%
+}
+
+.Section6 .Giftcard .Image img {
+    width: 100%
+}
+
+.Section6 .Circles {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 100px
+}
+
+.Section6 .Circles .Circle {
+    font-size: 16px;
+    border-radius: 100%;
+    background: var(--about_bg);
+    padding: 40px;
+    min-width: 368px;
+    max-width: 368px;
+    margin: 30px;
+    border: 8px solid #fff
+}
+
+.Section6 .Circles .Circle .Title {
+    font-size: 18px;
+    color: var(--dark_blue);
+    font-weight: 400;
+    margin: 20px 0
+}
+
+.Section6 .Circles .Circle .Text {
+    font-size: 16px;
+    color: var(--dark_blue);
+    font-weight: 300
+}
+
+.Section6 .Circles .Row {
+    display: flex;
+    justify-content: space-around
+}
+
+.Section6 .Circles .Row1 {
+    padding: 0 100px;
+    justify-content: center
+}
+
+.Section6 .Circles .Icon {
+    height: 50px
+}
+
+.Section6 .Circles .Icon img {
+    height: 100%
+}
+
+.Section6 .FactsMobile {
+    display: none
+}
+
+.Section6 .Action {
+    margin-top: -60px
+}
+
+.Section6 .Action a,
+.Section7 .Action a {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: var(--dark_blue);
+    padding: 15px 30px;
+    border-radius: 6px;
+    transition: background .2s ease-out;
+    -moz-transition: background .2s ease-out;
+    -ms-transition: background .2s ease-out;
+    -o-transition: background .2s ease-out;
+    -webkit-transition: background .2s ease-out
+}
+
+.Section6 .Action a:hover,
+.Section7 .Action a:hover {
+    background: var(--main_color);
+    transition: background .2s ease-out;
+    -moz-transition: background .2s ease-out;
+    -ms-transition: background .2s ease-out;
+    -o-transition: background .2s ease-out;
+    -webkit-transition: background .2s ease-out
+}
+
+.Section6 .Slider {
+    background: var(--grey_color);
+    border-radius: 22px;
+    border: 5px solid var(--grey_color);
+    max-width: 300px;
+    width: 100%
+}
+
+.Section6 .Slider .fade {
+    background: rgba(255, 255, 255, .5);
+    border-radius: 22px;
+    padding: 28px 44px 50px
+}
+
+.Section6 .Fact {
+    text-align: center
+}
+
+.Section6 .Fact .Title {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--dark_blue);
+    margin-top: 30px;
+    padding: 0
+}
+
+.Section6 .Fact .SubTitle {
+    font-size: 16px;
+    color: var(--dark_blue);
+    line-height: 22px;
+    margin-top: 20px
+}
+
+.Section6 .Fact .Icon img {
+    height: 70px
+}
+
+.Section6 .FactsMobile {
+    display: block
+}
+
+.Section6 .dot {
+    background: #fff;
+    border: 2px solid var(--dark_blue)
+}
+
+.Section6 .dot.active {
+    background: var(--dark_blue)
+}
+
+.Section6 .Slider .prev {
+    left: 0
+}
+
+.Section6 .Slider .next {
+    right: 0
+}
+
+.Section7 .Wrapper {
+    padding: 50px 0
+}
+
+.Section7 .Wrapper {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around
+}
+
+.Section7 .Wrapper .Description {
+    max-width: 500px;
+    margin-right: 40px
+}
+
+.Section7 .Wrapper .Title h2 {
+    font-size: 35px;
+    color: var(--dark_blue);
+    font-weight: 300
+}
+
+.Section7 .Wrapper .P1::before {
+    border-top: 8px solid #d6d6d6;
+    content: '';
+    display: block;
+    width: 85px;
+    margin-bottom: 30px;
+    line-height: 27px
+}
+
+.Section7 .Wrapper .P1 {
+    color: #777;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 37px 0
+}
+
+.Section7 .Wrapper .P2 {
+    color: var(--dark_blue);
+    font-size: 16px;
+    font-weight: 300
+}
+
+.Section7 .Wrapper .Image {
+    min-width: 646px
+}
+
+.Section7 .Wrapper .Image img {
+    width: 100%
+}
+
+.Section7 .Action {
+    margin: 80px 0
+}
+
+.Section8 {
+    text-align: center
+}
+
+.Section8.HG {
+    background: url(../images/Homepage/MediaBackground_HG.jpg) no-repeat;
+    background-size: cover;
+    padding: 100px 0 50px;
+    background-position: center center;
+    text-align: center;
+    position: relative
+}
+
+.Section8.FG {
+    background: url(../images/Homepage/MediaBackground_FG.png) no-repeat;
+    background-size: cover;
+    padding: 100px 0 50px;
+    background-position: center center;
+    text-align: center;
+    position: relative
+}
+
+.Section8 .Quotes {
+    color: #d0d3d6;
+    font-size: 152px;
+    font-family: georgia;
+    line-height: 20px
+}
+
+.Section8 h2 {
+    color: var(--main_color);
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 50px
+}
+
+.Slider {
+    max-width: 1000px;
+    position: relative;
+    margin: auto
+}
+
+.Slider .mySlides {
+    display: none
+}
+
+.Slider .prev,
+.Slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none
+}
+
+.Slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px
+}
+
+.Slider .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.Slider .active,
+.Slider .dot:hover {
+    background-color: #717171
+}
+
+.Slider .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media(min-width: 1920px) {
+    .Section1 .Left .Row1 .Image {
+        width: 404px;
+        min-width: 404px;
+        max-width: 404px
+    }
+
+    .Section1 .Left .Row2 .Image {
+        width: 525px;
+        min-width: 535px;
+        max-width: 525px
+    }
+
+    .Section1 .Right .P3 .Quotes {
+        display: none
+    }
+
+    .Section2 .Title h2 {
+        font-size: 35px;
+        color: var(--dark_blue)
+    }
+
+    .Section3 .Team .Member {
+        width: 17%;
+        margin: 50px 0
+    }
+
+    .Section4 .Trust .Circle {
+        width: 260px;
+        height: 260px
+    }
+
+    .Section4 .Care .Circle {
+        width: 166px;
+        height: 166px
+    }
+
+    .Section4 .Growth .Circle {
+        width: 207px;
+        height: 207px
+    }
+
+    .Section4 .Experience .Circle {
+        width: 233px;
+        height: 233px
+    }
+
+    .Section4 .Love .Circle {
+        width: 174px;
+        height: 174px
+    }
+
+    .Section4 .Trust {
+        top: 0;
+        flex-direction: column
+    }
+
+    .Section4 .Care {
+        top: 0;
+        flex-direction: column-reverse;
+        align-self: flex-start;
+        left: 30px
+    }
+
+    .Section4 .Growth {
+        top: 0;
+        flex-direction: column;
+        align-self: flex-end
+    }
+
+    .Section4 .Experience {
+        top: 0;
+        flex-direction: column-reverse;
+        align-self: baseline;
+        top: 50px
+    }
+
+    .Section4 .Love {
+        top: 0;
+        flex-direction: column;
+        top: 50px
+    }
+
+    .Section6 .FactsMobile {
+        display: none
+    }
+}
+
+@media(min-width: 1280px) and (max-width:1920px) {
+    .Section1 .Left .Row1 {
+        margin-top: 100px
+    }
+
+    .Section1 .Left .Row2 {
+        margin-top: 100px
+    }
+
+    .Section1 .Left .Row1 .Image {
+        min-width: 267px;
+        max-width: 267px
+    }
+
+    .Section1 .Left .Row2 .Image {
+        min-width: 347px;
+        max-width: 347px
+    }
+
+    .Section1 .Right .P3 .Quotes {
+        display: none
+    }
+
+    .Section2 .Title h2 {
+        font-size: 35px;
+        color: var(--dark_blue)
+    }
+
+    .Section3 .Team .Member {
+        width: 25%
+    }
+
+    .Section4 .Trust .Circle {
+        width: 260px;
+        height: 260px
+    }
+
+    .Section4 .Care .Circle {
+        width: 166px;
+        height: 166px
+    }
+
+    .Section4 .Growth .Circle {
+        width: 207px;
+        height: 207px
+    }
+
+    .Section4 .Experience .Circle {
+        width: 233px;
+        height: 233px
+    }
+
+    .Section4 .Love .Circle {
+        width: 174px;
+        height: 174px
+    }
+
+    .Section4 .Trust {
+        top: 0;
+        flex-direction: column
+    }
+
+    .Section4 .Care {
+        top: 0;
+        flex-direction: column-reverse;
+        align-self: flex-start;
+        left: 30px
+    }
+
+    .Section4 .Growth {
+        top: 0;
+        flex-direction: column;
+        align-self: flex-end
+    }
+
+    .Section4 .Experience {
+        top: 0;
+        flex-direction: column-reverse;
+        align-self: baseline;
+        top: 50px
+    }
+
+    .Section4 .Love {
+        top: 0;
+        flex-direction: column;
+        top: 50px
+    }
+
+    .Section6 .FactsMobile {
+        display: none
+    }
+}
+
+@media(min-width: 1580px) and (max-width:1920px) {
+    .Section1 .Left .Row1 {
+        margin-top: 100px
+    }
+
+    .Section1 .Left .Row2 {
+        margin-top: 100px
+    }
+
+    .Section1 .Left .Row1 .Image {
+        min-width: 267px;
+        max-width: 267px
+    }
+
+    .Section1 .Left .Row2 .Image {
+        min-width: 347px;
+        max-width: 347px
+    }
+
+    .Section1 .Right .P3 .Quotes {
+        display: none
+    }
+
+    .Section3 .Team .Member {
+        width: 20%
+    }
+
+    .Section6 .FactsMobile {
+        display: none
+    }
+}
+
+@media(min-width: 1280px) and (max-width:1580px) {
+    .Section1 .Left .Row1 {
+        margin-top: 100px
+    }
+
+    .Section1 .Left .Row2 {
+        margin-top: 100px
+    }
+
+    .Section1 .Left .Row1 .Image {
+        min-width: 267px;
+        max-width: 267px
+    }
+
+    .Section1 .Left .Row2 .Image {
+        min-width: 347px;
+        max-width: 347px
+    }
+
+    .Section1 .Right .P3 .Quotes {
+        display: none
+    }
+
+    .Section2 .Title h2 {
+        font-size: 35px;
+        color: var(--dark_blue)
+    }
+
+    .Section3 .Team .Member {
+        width: 25%
+    }
+
+    .Section6 .FactsMobile {
+        display: none
+    }
+}
+
+@media(min-width: 1024px) and (max-width:1280px) {
+    .Section1 {
+        flex-direction: column
+    }
+
+    .Section1 .Left .Row1 {
+        margin-top: 100px
+    }
+
+    .Section1 .Left,
+    .Section1 .Right {
+        width: 100%
+    }
+
+    .Section1 .Left .Row1 .Image {
+        min-width: 267px;
+        max-width: 267px
+    }
+
+    .Section1 .Left .Row2 .Image {
+        min-width: 347px;
+        max-width: 347px
+    }
+
+    .Section1 .Right .P2 {
+        float: left;
+        width: 50%;
+        clear: both;
+        display: block
+    }
+
+    .Section1 .Right .P3 {
+        float: right;
+        width: 50%;
+        padding-left: 40px;
+        margin: 52px 0
+    }
+
+    .Section1 .Right .P3 img {
+        display: block;
+        visibility: hidden
+    }
+
+    .Section1 .Right .P3 .Quotes {
+        display: block
+    }
+
+    .Section2 .Title h2 {
+        font-size: 35px;
+        color: var(--dark_blue)
+    }
+
+    .Section3 .Team .Member {
+        width: 25%
+    }
+
+    .Section8 h2 {
+        font-size: 25px
+    }
+
+    .Section4 .Trust .Circle {
+        width: 224px;
+        height: 224px
+    }
+
+    .Section4 .Care .Circle {
+        width: 166px;
+        height: 166px
+    }
+
+    .Section4 .Growth .Circle {
+        width: 185px;
+        height: 185px
+    }
+
+    .Section4 .Experience .Circle {
+        width: 209px;
+        height: 209px
+    }
+
+    .Section4 .Love .Circle {
+        width: 154px;
+        height: 154px
+    }
+
+    .Section4 .Trust {
+        top: 0;
+        flex-direction: column
+    }
+
+    .Section4 .Care {
+        top: 0;
+        flex-direction: column-reverse;
+        align-self: flex-start;
+        left: 10px
+    }
+
+    .Section4 .Growth {
+        top: 0;
+        flex-direction: column;
+        align-self: flex-end
+    }
+
+    .Section4 .Experience {
+        top: 0;
+        flex-direction: column-reverse;
+        align-self: baseline;
+        top: 50px
+    }
+
+    .Section4 .Love {
+        top: 0;
+        flex-direction: column;
+        top: 50px
+    }
+
+    .Section4 .Values .Text {
+        font-size: 14px
+    }
+
+    .Section4 .Values {
+        height: 520px
+    }
+
+    .Section6 .FactsMobile {
+        display: none
+    }
+
+    .Section7 .Wrapper .Image {
+        min-width: 500px
+    }
+
+    .Section7 .Wrapper .Title h2 {
+        font-size: 30px
+    }
+
+    .Section6 {
+        margin-top: 60px;
+        padding-top: 60px
+    }
+}
+
+@media(min-width: 768px) and (max-width:1024px) {
+    .Section1 {
+        flex-direction: column
+    }
+
+    .Section1 .Left .Row1 {
+        margin-top: 100px
+    }
+
+    .Section1 .Left,
+    .Section1 .Right {
+        width: 100%
+    }
+
+    .Section1 .Left .Row1 .Image {
+        min-width: 233px;
+        max-width: 233px
+    }
+
+    .Section1 .Left .Row2 .Image {
+        min-width: 328px;
+        max-width: 328px
+    }
+
+    .Section1 .Right .P2 {
+        float: left;
+        width: 50%;
+        clear: both;
+        display: block
+    }
+
+    .Section1 .Right .P3 {
+        float: right;
+        width: 50%;
+        padding-left: 40px;
+        margin: 52px 0
+    }
+
+    .Section1 .Right .P3 img {
+        display: block;
+        visibility: hidden
+    }
+
+    .Section1 .Right .P3 .Quotes {
+        display: block
+    }
+
+    .Section2 .Title h2 {
+        font-size: 22px
+    }
+
+    .Section3 .Title h2 {
+        font-size: 25px
+    }
+
+    .Section4 .Trust .Circle {
+        width: 164px;
+        height: 164px
+    }
+
+    .Section4 .Care .Circle {
+        width: 114px;
+        height: 114px
+    }
+
+    .Section4 .Growth .Circle {
+        width: 134px;
+        height: 134px
+    }
+
+    .Section4 .Experience .Circle {
+        width: 153px;
+        height: 153px
+    }
+
+    .Section4 .Love .Circle {
+        width: 120px;
+        height: 120px
+    }
+
+    .Section4 .Trust {
+        top: 0;
+        flex-direction: column
+    }
+
+    .Section4 .Care {
+        top: 0;
+        flex-direction: column-reverse;
+        align-self: flex-start;
+        left: 0
+    }
+
+    .Section4 .Growth {
+        top: 0;
+        flex-direction: column;
+        align-self: flex-end
+    }
+
+    .Section4 .Experience {
+        top: 0;
+        flex-direction: column-reverse;
+        align-self: baseline;
+        top: 50px
+    }
+
+    .Section4 .Love {
+        top: 0;
+        flex-direction: column;
+        top: 50px
+    }
+
+    .Section4 .Values .Text {
+        font-size: 14px;
+        margin: 26px 0
+    }
+
+    .Section4 .Values {
+        height: 446px
+    }
+
+    .Section5 .Title h2 {
+        font-size: 25px
+    }
+
+    .Section6 .Circles .Circle {
+        min-width: 320px;
+        max-width: 320px;
+        font-size: 14px
+    }
+
+    .Section6 .Circles .Circle .Text {
+        font-size: 14px
+    }
+
+    .Section6 .FactsMobile {
+        display: none
+    }
+
+    .Section6 .Giftcards {
+        display: unset;
+        padding: 0
+    }
+
+    .Section6 .Giftcard {
+        float: left;
+        width: 50%;
+        margin: 30px 0;
+        max-width: 400px
+    }
+
+    .Section6 .Circles {
+        clear: both
+    }
+
+    .Section6 .Title h2 {
+        font-size: 25px
+    }
+
+    .Section6 .Giftcards .Title {
+        font-size: 20px
+    }
+
+    .Section7 .Wrapper .Image {
+        min-width: 410px
+    }
+
+    .Section7 .Wrapper .Title h2 {
+        font-size: 30px
+    }
+
+    .Section8 h2 {
+        font-size: 20px
+    }
+
+    .Section6 {
+        margin-top: 60px;
+        padding-top: 60px
+    }
+}
+
+@media(max-width: 768px) {
+    .Section6 {
+        margin-top: 60px;
+        padding-top: 60px
+    }
+
+    .Section1 {
+        flex-direction: column
+    }
+
+    .Section1 .Left .Row1 {
+        margin-top: -20px;
+        flex-direction: column-reverse
+    }
+
+    .Section1 .Left .Row2 {
+        margin-top: 50px;
+        flex-direction: column-reverse
+    }
+
+    .Section1 .Left .Row .Text {
+        text-align: center
+    }
+
+    .Section1 .Left,
+    .Section1 .Right {
+        width: 100%
+    }
+
+    .Section1 .Left .Row1 .Image {
+        min-width: 233px;
+        max-width: 233px
+    }
+
+    .Section1 .Left .Row2 .Image {
+        min-width: 268px;
+        max-width: 268px
+    }
+
+    .Section1 .Text {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+
+    .Section1 .Right .P2 {
+        float: none;
+        width: 100%;
+        clear: both;
+        display: block;
+        margin-bottom: 0
+    }
+
+    .Section1 .Right .P3 {
+        float: none;
+        width: 100%;
+        margin: 45px 0
+    }
+
+    .Section1 .Right .P3 img {
+        display: block;
+        visibility: hidden
+    }
+
+    .Section1 .Right .P3 .Quotes {
+        display: block
+    }
+
+    .Section1 .Right .P3 .Quotes {
+        display: none
+    }
+
+    .Section2 .Title h2 {
+        font-size: 22px
+    }
+
+    .Section3 .Title h2 {
+        font-size: 20px
+    }
+
+    .Section3 .Team .Member {
+        width: 33.3%
+    }
+
+    .Section3 .Text {
+        flex-direction: column
+    }
+
+    .Section3 .Text p {
+        margin: 0 !important;
+        width: 100%
+    }
+
+    .Section4 .Trust .Circle {
+        width: 151px;
+        height: 151px
+    }
+
+    .Section4 .Care .Circle {
+        width: 111px;
+        height: 111px
+    }
+
+    .Section4 .Growth .Circle {
+        width: 124px;
+        height: 124px
+    }
+
+    .Section4 .Experience .Circle {
+        width: 135px;
+        height: 135px
+    }
+
+    .Section4 .Love .Circle {
+        width: 102px;
+        height: 102px
+    }
+
+    .Section4 .Trust {
+        top: 60px;
+        flex-direction: column;
+        left: 0
+    }
+
+    .Section4 .Care {
+        top: 0;
+        flex-direction: column-reverse;
+        align-self: flex-start;
+        left: 60px
+    }
+
+    .Section4 .Growth {
+        top: 0;
+        flex-direction: column;
+        align-self: unset;
+        right: -40px;
+        top: 250px
+    }
+
+    .Section4 .Experience {
+        flex-direction: column-reverse;
+        align-self: baseline;
+        top: 440px;
+        left: -330px
+    }
+
+    .Section4 .Love {
+        flex-direction: column;
+        top: 450px;
+        left: -300px
+    }
+
+    .Section4 .Values .Text {
+        font-size: 14px;
+        margin: 26px 0
+    }
+
+    .Section4 .Values {
+        height: 665px;
+        max-width: 460px
+    }
+
+    .Section5 {
+        margin: 75px auto
+    }
+
+    .Section6 .Circles {
+        display: none
+    }
+
+    .Section6 .Giftcards {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .Section6 .Giftcard {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px 0
+    }
+
+    .Section6 .FactsMobile {
+        display: block
+    }
+
+    .Section6 .Title h2 {
+        font-size: 20px
+    }
+
+    .Section6 .Giftcards .Title {
+        font-size: 16px;
+        margin-bottom: 10px
+    }
+
+    .Section7 .Wrapper {
+        flex-direction: column-reverse
+    }
+
+    .Section7 .Wrapper .Image {
+        width: 100%;
+        max-width: 410px;
+        min-width: 100%
+    }
+
+    .Section7 .Wrapper .Description {
+        margin-top: 50px;
+        max-width: 100%
+    }
+
+    .Section7 .Wrapper .Title h2 {
+        font-size: 25px
+    }
+
+    .Section8 h2 {
+        font-size: 20px
+    }
+}
+
+@media(max-width: 484px) {
+    .Section4 .Values {
+        display: unset
+    }
+
+    .Section4 .Trust .Circle {
+        width: 150px;
+        height: 150px
+    }
+
+    .Section4 .Care .Circle {
+        width: 150px;
+        height: 150px
+    }
+
+    .Section4 .Growth .Circle {
+        width: 150px;
+        height: 150px
+    }
+
+    .Section4 .Experience .Circle {
+        width: 150px;
+        height: 150px
+    }
+
+    .Section4 .Love .Circle {
+        width: 150px;
+        height: 150px
+    }
+
+    .Section4 .Circle {
+        min-width: 150px
+    }
+
+    .Section4 .Trust,
+    .Section4 .Care,
+    .Section4 .Growth,
+    .Section4 .Experience,
+    .Section4 .Love {
+        flex-direction: row;
+        position: unset;
+        padding: 0 20px;
+        margin: 20px 0
+    }
+
+    .Section4 .Values .Text {
+        text-align: left;
+        padding: 0 10px
+    }
+
+    .Section5 .Title h2 {
+        font-size: 20px
+    }
+}
+
+@media(max-width: 334px) {
+    .Section3 .Team .Member {
+        width: 50%
+    }
+}
