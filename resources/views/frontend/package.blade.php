@@ -48,7 +48,7 @@
                                     <div class="form-group">
                                         <label class="wps_wgc_label">From</label>
                                         <input type="text" name="send_from" id="wps_wgm_from_name"
-                                            class="wps_wgm_from_name form-control" placeholder="Enter the sender name" value="@if(Auth::check() && Auth::user()->hasRole('USER')) {{ Auth::user()->full_name }} @else {{ old('send_from') }} @endif">
+                                            class="wps_wgm_from_name form-control" placeholder="Enter the sender email" value="@if(Auth::check() && Auth::user()->hasRole('USER')) {{ Auth::user()->email }} @else {{ old('send_from') }} @endif">
                                             @if ($errors->has('send_from'))
                                             <div class="error" style="color:red;">{{ $errors->first('send_from') }}
                                             </div>

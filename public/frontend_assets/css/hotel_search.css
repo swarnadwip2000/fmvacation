@@ -91,6 +91,7 @@
     right: -13px;
     color: #acacac;
 }
+
 @media screen and (max-width: 600px) {
   .view_map_seacrh .search-container {
     float: none;
@@ -121,10 +122,21 @@
     box-shadow: 0 0 21px #ddd;
     border: 1px solid #e7e5e5;
     margin-bottom: 30px;
+    height: 500px;
 }
 .hotel_right{
-    padding:25px 27px 25px 0;
+    padding:20px;
 }
+.filters-content .show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 350ms;
+  }
+ .filters-content .hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 350ms;
+  }
 .hotel_right p i{color:#000;}
 .star_hotel{
     padding-left: 0px;
@@ -211,10 +223,39 @@
 }
 
 .hotel_slid{
-    
+   height: 300px; 
 }
 
-
+.all_hotels .filters {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .all_hotels .filters ul {
+    padding: 0;
+  }
+  .all_hotels .filters ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px 30px;
+    cursor: pointer;
+    position: relative;
+  }
+  .all_hotels .filters ul li:after {
+    content: "";
+    display: block;
+    width: calc(0% - 60px);
+    position: absolute;
+    height: 2px;
+    background: #333;
+    transition: width 350ms ease-out;
+  }
+  .all_hotels .filters ul li:hover:after {
+    width: calc(100% - 60px);
+    transition: width 350ms ease-out;
+  }
+  .all_hotels .filters ul li.active:after {
+    width: calc(100% - 60px);
+  }
 
 
 

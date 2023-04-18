@@ -62,6 +62,7 @@ class AuthController extends Controller
 
             if ($user->hasRole('USER') && $user->status == 1) {
                   // update cart table with user id
+                  Cart::where('user_id', $user->id)->delete();
                   Cart::where('session_id', Session::get('session_id'))->update(['user_id' => $user->id]);
                 return redirect()->route('cart');
             } else {

@@ -13,6 +13,7 @@ use App\Http\Controllers\User\AuthController as UserAuthController;
 use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\OrderController;
 use App\Http\Controllers\User\PackageController;
+use App\Http\Controllers\User\ProfileController as UserProfileController;
 use Illuminate\Support\Facades\Artisan;
 
 /*
@@ -90,5 +91,23 @@ Route::post('remove-cart', [CartController::class, 'cartRemove'])->name('fronten
 Route::middleware('user')->group(function () {
     Route::get('checkout', [OrderController::class, 'checkout'])->name('checkout');
     Route::post('checkout-store', [OrderController::class, 'checkoutStore'])->name('checkout.store');
+    // success payment
+    Route::get('success', [OrderController::class, 'success'])->name('payment.success');
+    // cancel payment
+    Route::get('cancel', [OrderController::class, 'cancel'])->name('payment.cancel');
+
     Route::post('save-address', [OrderController::class, 'saveAddress'])->name('save.address');
+    // hold order profilecontroller
+    Route::get('hold-order', [UserProfileController::class, 'holdOrder'])->name('hold.order');
+    // order details
+    Route::get('orders', [UserProfileController::class, 'orders'])->name('orders');
+    // profile
+    Route::get('profile', [UserProfileController::class, 'profile'])->name('profile');
+    Route::post('profile-update', [UserProfileController::class, 'profileUpdate'])->name('profile.update');
+    Route::get('active-order/{id}', [UserProfileController::class, 'activeOrder'])->name('active.order');
+    Route::get('resend-mail/{id}', [UserProfileController::class, 'resendMil'])->name('resend.mail');
+    Route::get('download-pdf/{id}', [UserProfileController::class, 'downloadPdf'])->name('download.pdf');
+    // change password
+    Route::get('change-password', [UserProfileController::class, 'changePassword'])->name('change.password');
+    Route::post('change-password-update', [UserProfileController::class, 'changePasswordUpdate'])->name('change.password.update');
 });

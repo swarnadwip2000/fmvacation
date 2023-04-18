@@ -2511,6 +2511,7 @@ span.step_count {
     border-radius: 0;
     background-color: #f7f7f8;
     box-shadow: none !important;
+    height: auto;
   }
   .form-control, .form-control:focus {
     color: #282828;
@@ -2662,7 +2663,126 @@ span.step_count {
   /*---- shipping billing -----*/
   
 
+/*---- Profile -----*/
 
+.dashboard_section {
+    padding: 100px 0;
+  }
+  .img_image{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 20px rgb(0 0 0 / 21%);
+    padding: 5px;
+  }
+  .img_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .name_price h5{
+    font-size: 20px;
+  }
+  .name_price span{
+    font-size: 14px;
+    background: #e49228;
+    color: #fff;
+    padding: 2px 10px 2px 25px;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  .name_price span:before{
+    background: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 5px;
+    transform: translate(0px, -50%);
+  
+  }
+  .img-market{
+    padding: 15px 0;
+    margin: 0;
+  }
+  .img-market a{
+    color: #424242;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  .img-market a i{
+    color: #424242;
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  .dashboard_left{
+    background: #fff;
+    box-shadow: 0 0 40px rgb(0 0 0 / 10%);
+    padding: 15px;
+    border-radius: 15px;
+  }
+  .left_drop_dashboard{
+    padding-left: 10px;
+  }
+  .left_drop_dashboard li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .left_drop_dashboard li i{
+      color: #747474;
+      margin-right: 7px;
+      font-size: 14px;
+  }
+  .left_drop_dashboard li a{
+    font-size: 15px;
+      color: #747474;
+  }
+  .right_content{
+    padding: 20px;
+    background: #fff;
+    box-shadow: 2px 2px 30px rgb(0 0 0 / 10%);
+    margin-bottom: 28px;
+    border-radius: 8px;
+    position: relative;
+  }
+  .edit_profile{
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    padding: 2px;    
+  }
+  .edit_profile a{
+    color: var(--white-color) !important;
+    background: #000;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.resend{
+    position: relative;
+    background: #fd3103 !important;
+    text-align: center;
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 14px 40px;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+  /*---- Profile -----*/
+  
+  
 
 
 

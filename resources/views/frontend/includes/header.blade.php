@@ -22,13 +22,13 @@
                                     <!-- <li>
                                     <a href="">Our Hotels</a>
                                 </li> -->
-                                    <li class="nav-item dropdown">
-                                        <a class="dropdown-toggle" href="{{ route('our-hotels') }}" id="navbarDropdown"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
+                                    <li class="nav-item ">
+                                        <a class="" href="{{ route('our-hotels') }}" id=""
+                                            role="" data-toggle="" aria-haspopup=""
+                                            aria-expanded="">
                                             Our Hotels
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="hotels.html">Sydney</a>
                                             <a class="dropdown-item" href="hotels.html">Melbourne</a>
                                             <a class="dropdown-item" href="hotels.html">Cairns</a>
@@ -37,14 +37,14 @@
                                             <a class="dropdown-item" href="hotels.html">Perth</a>
                                             <a class="dropdown-item" href="hotels.html">Gold Coast</a>
                                             <a class="dropdown-item" href="hotels.html">Canberra</a>
-                                        </div>
+                                        </div> --}}
                                     </li>
                                     <!-- <li><a href="redeem.html">Redeem</a></li> -->
                                     <li><a href="{{ route('how-it-works') }}">How it works</a></li>
                                     <li><a href="{{ route('about-us') }}">About</a></li>
                                     <li><a href="{{ route('our-package') }}">Our Package</a></li>
                                     @if (Auth::check() && Auth::user()->hasRole('USER'))
-                                        <li><a href="{{ route('logout') }}">Logout</a></li>
+                                        <li><a href="{{ route('profile') }}">Profile</a></li>
                                     @else
                                         <li><a href="{{ route('login') }}">Login</a></li>
                                     @endif
@@ -79,14 +79,14 @@
                                     <li class="menu-home"><a href="{{ route('home') }}"><span>HOME</span></a></li>
                                     <!-- <li class="menu-create"><a href="#"><span>GIVE</span></a></li>
                                 <li class="menu-redeem"><a href="#"><span>REDEEM</span></a></li> -->
-                                    <li class="nav-item dropdown">
-                                        <a class="dropdown-toggle" href="{{ route('our-hotels') }}" id="navbarDropdown"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
+                                    <li class="nav-item ">
+                                        <a class="" href="{{ route('our-hotels') }}" id=""
+                                            role="" data-toggle="" aria-haspopup=""
+                                            aria-expanded="">
                                             <span>{{ Request::is('package/*') ? 'Package' : '' }}{{ Request::is('how-it-works/*') ? 'How it works' : '' }}{{ Request::is('about-us/*') ? 'About Us' : '' }}
                                                 {{ Request::is('our-package/*') ? 'Our Package' : '' }}{{ Request::is('cart/*') ? 'Cart' : '' }}{{ Request::is('checkout/*') ? 'Checkout' : '' }}</span>
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="hotels.html">Sydney</a>
                                             <a class="dropdown-item" href="hotels.html">Melbourne</a>
                                             <a class="dropdown-item" href="hotels.html">Cairns</a>
@@ -95,7 +95,7 @@
                                             <a class="dropdown-item" href="hotels.html">Perth</a>
                                             <a class="dropdown-item" href="hotels.html">Gold Coast</a>
                                             <a class="dropdown-item" href="hotels.html">Canberra</a>
-                                        </div>
+                                        </div> --}}
                                     </li>
                                     <li class="menu-how-it-works"><a href="{{ route('how-it-works') }}"><span>HOW IT
                                                 WORKS</span></a></li>
@@ -103,7 +103,7 @@
                                                 US</span></a></li>
                                     <li><a href="{{ route('our-package') }}"><span>Our Package</span></a></li>
                                     @if (Auth::check() && Auth::user()->hasRole('USER'))
-                                        <li><a href="{{ route('logout') }}">Logout</a></li>
+                                        <li><a href="{{ route('profile') }}">Profile</a></li>
                                     @else
                                         <li><a href="{{ route('login') }}">Login</a></li>
                                     @endif
@@ -162,12 +162,12 @@
                                     <!-- <li>
                                                 <a href="">Our Hotels</a>
                                             </li> -->
-                                    <li class="nav-item dropdown">
-                                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <li class="nav-item ">
+                                        <a class="" href="{{route('our-hotels')}}" id="" role=""
+                                            data-toggle="" aria-haspopup="" aria-expanded="">
                                             Our Hotels
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="hotels.html">Sydney</a>
                                             <a class="dropdown-item" href="hotels.html">Melbourne</a>
                                             <a class="dropdown-item" href="hotels.html">Cairns</a>
@@ -176,7 +176,7 @@
                                             <a class="dropdown-item" href="hotels.html">Perth</a>
                                             <a class="dropdown-item" href="hotels.html">Gold Coast</a>
                                             <a class="dropdown-item" href="hotels.html">Canberra</a>
-                                        </div>
+                                        </div> --}}
                                     </li>
                                     <!-- <li><a href="redeem.html">Redeem</a></li> -->
                                     <li class="menu-how-it-works"><a href="{{ route('how-it-works') }}"><span>HOW IT
@@ -185,7 +185,7 @@
                                                 US</span></a></li>
                                     <li><a href="{{ route('our-package') }}"><span>Our Package</span></a></li>
                                     @if (Auth::check() && Auth::user()->hasRole('USER'))
-                                    <li><a href="{{ route('logout') }}">Logout</a></li>
+                                    <li><a href="{{ route('profile') }}">Profile</a></li>
                                 @else
                                     <li><a href="{{ route('login') }}">Login</a></li>
                                 @endif
@@ -220,13 +220,13 @@
                                     <li class="menu-home"><a href="{{ route('home') }}"><span>HOME</span></a></li>
                                     <!-- <li class="menu-create"><a href="#"><span>GIVE</span></a></li>
                                             <li class="menu-redeem"><a href="#"><span>REDEEM</span></a></li> -->
-                                    <li class="nav-item dropdown">
-                                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <li class="nav-item ">
+                                        <a class="dropdown-toggle" href="{{route('our-hotels')}}" id="" role=""
+                                            data-toggle="" aria-haspopup="" aria-expanded="">
                                             <span>{{ Request::is('package/*') ? 'Package' : '' }}{{ Request::is('how-it-works/*') ? 'How it works' : '' }}{{ Request::is('about-us/*') ? 'About Us' : '' }}
                                                 {{ Request::is('our-package/*') ? 'Our Package' : '' }}{{ Request::is('cart/*') ? 'Cart' : '' }}{{ Request::is('checkout/*') ? 'Checkout' : '' }}</span>
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="hotels.html">Sydney</a>
                                             <a class="dropdown-item" href="hotels.html">Melbourne</a>
                                             <a class="dropdown-item" href="hotels.html">Cairns</a>
@@ -235,7 +235,7 @@
                                             <a class="dropdown-item" href="hotels.html">Perth</a>
                                             <a class="dropdown-item" href="hotels.html">Gold Coast</a>
                                             <a class="dropdown-item" href="hotels.html">Canberra</a>
-                                        </div>
+                                        </div> --}}
                                     </li>
                                     <li class="menu-how-it-works"><a href="{{ route('how-it-works') }}"><span>HOW IT
                                         WORKS</span></a></li>
@@ -243,7 +243,7 @@
                                         US</span></a></li>
                             <li><a href="{{ route('our-package') }}"><span>Our Package</span></a></li>
                             @if (Auth::check() && Auth::user()->hasRole('USER'))
-                                    <li><a href="{{ route('logout') }}">Logout</a></li>
+                                    <li><a href="{{ route('profile') }}">Profile</a></li>
                                 @else
                                     <li><a href="{{ route('login') }}">Login</a></li>
                                 @endif

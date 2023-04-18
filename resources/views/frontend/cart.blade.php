@@ -19,7 +19,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="left_img_text">
                                         <div class="cart_small_img">
-                                            <img src="img/gift.jpg" alt="" />
+                                            <img src="{{ asset('frontend_assets/img/gift.jpg') }}" alt="" />
                                         </div>
                                         <div class="img_left_text">
                                             <h5>{{ $packageCart['package']['package_name'] }}</h5>
@@ -99,9 +99,10 @@
                             $('#remove').remove();
                             $('.top__footer').append(
                                 '<h2 class="text-center">Your cart is empty</h2>');
+                                $('#mini-cart-count').html(0);
                         }
                     }
-                })
+                });
             })
         })
     </script>

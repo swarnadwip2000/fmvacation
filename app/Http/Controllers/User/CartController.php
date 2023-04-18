@@ -25,16 +25,20 @@ class CartController extends Controller
     public function addToCart(Request $request)
     {
         $request->validate([
-            'send_to' => 'required',
+            'send_to' => 'required|email|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix',
             'send_message' => 'required|max:20',
             'delivery_method' => 'required',
-            'send_from' => 'required',
+            'send_from' => 'required|email|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix',
         ],[
             'send_to.required' => 'Please enter send to',
+            'send_to.email' => 'Please enter valid email',
+            'send_to.regex' => 'Please enter valid email',
             'send_message.required' => 'Please enter gift message field',
             'send_message.max' => 'Gift message field must be less than 20 characters',
             'delivery_method.required' => 'Please select delivery method',
             'send_from.required' => 'Please enter the recipient mailing address',
+            'send_from.email' => 'Please enter valid email',
+            'send_from.regex' => 'Please enter valid email',
         ]);
 
         $data = $request->all();

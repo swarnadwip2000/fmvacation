@@ -18,6 +18,10 @@ class CreateOrdersTable extends Migration
             $table->string('order_number')->unique();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('package_id')->references('id')->on('packages')->onDelete('cascade');
+            $table->string('send_to')->nullable();
+            $table->string('send_from')->nullable();
+            $table->string('send_message')->nullable();
+            $table->string('delivery_method')->nullable();
             $table->string('payment_method')->nullable();
             $table->string('shipping_charge')->nullable();
             $table->string('grand_total')->nullable();
@@ -34,7 +38,7 @@ class CreateOrdersTable extends Migration
             $table->string('billing_zipcode')->nullable();
             $table->text('billing_address')->nullable();
             $table->string('voucher_code')->nullable();
-            $table->string('order_status')->nullable();
+            $table->boolean('order_status')->default(false);
             $table->timestamps();
         });
     }
