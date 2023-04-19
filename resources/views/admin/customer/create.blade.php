@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-Demo | Create Customer
+{{env('APP_NAME')}} | Create Customer
 @endsection
 @push('styles')
 @endpush
@@ -40,10 +40,17 @@ Demo | Create Customer
                                     <div class="border p-4 rounded">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> Name <span style="color: red;">*</span></label>
-                                                <input type="text" name="name" id="" class="form-control" value="{{ old('name') }}" placeholder="Enter Customer Name">
-                                                @if($errors->has('name'))
-                                                <div class="error" style="color:red;">{{ $errors->first('name') }}</div>
+                                                <label for="inputEnterYourName" class="col-form-label"> First Name <span style="color: red;">*</span></label>
+                                                <input type="text" name="first name" id="" class="form-control" value="{{ old('first name') }}" placeholder="Enter Customer First Name">
+                                                @if($errors->has('first name'))
+                                                <div class="error" style="color:red;">{{ $errors->first('first name') }}</div>
+                                                @endif
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="inputEnterYourName" class="col-form-label"> Last Name <span style="color: red;">*</span></label>
+                                                <input type="text" name="last_name" id="" class="form-control" value="{{ old('last_name') }}" placeholder="Enter Customer Last Name">
+                                                @if($errors->has('last_name'))
+                                                <div class="error" style="color:red;">{{ $errors->first('last_name') }}</div>
                                                 @endif
                                             </div>
                                             <div class="col-md-6">
@@ -60,23 +67,7 @@ Demo | Create Customer
                                                 <div class="error" style="color:red;">{{ $errors->first('phone') }}</div>
                                                 @endif
                                             </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> City </label>
-                                                <input type="text" name="city" id="" class="form-control" value="{{ old('city') }}" placeholder="City">
-                                               
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> Country </label>
-                                                <input type="text" name="country" id="" class="form-control" value="{{ old('country') }}" placeholder="Country">
-                                              
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> Address <span style="color: red;">*</span></label>
-                                                <input type="text" name="address" id="" class="form-control" value="{{ old('address') }}" placeholder="Address">
-                                                @if($errors->has('address'))
-                                                <div class="error" style="color:red;">{{ $errors->first('address') }}</div>
-                                                @endif
-                                            </div>
+                                          
                                            
                                             <div class="col-md-6">
                                                 <label for="inputEnterYourName" class="col-form-label"> Password <span style="color: red;">*</span></label>
@@ -90,13 +81,6 @@ Demo | Create Customer
                                                 <input type="password" name="confirm_password" id="" class="form-control" value="{{ old('confirm_password') }}">
                                                 @if($errors->has('confirm_password'))
                                                 <div class="error" style="color:red;">{{ $errors->first('confirm_password') }}</div>
-                                                @endif
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> Pin Code <span style="color: red;">*</span></label>
-                                                <input type="text" name="pincode" id="" class="form-control" value="{{ old('pincode') }}" placeholder="Pincode">
-                                                @if($errors->has('pincode'))
-                                                <div class="error" style="color:red;">{{ $errors->first('pincode') }}</div>
                                                 @endif
                                             </div>
                                             <div class="col-md-6">

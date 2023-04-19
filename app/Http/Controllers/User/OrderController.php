@@ -176,6 +176,7 @@ class OrderController extends Controller
                 $order->billing_state = Session::get('billing_state');
                 $order->billing_country = Session::get('billing_country');
                 $order->billing_zipcode = Session::get('billing_zipcode');
+                $order->billing_address = Session::get('billing_address');
                 // unique alphpanumeric vouchger code
                 $order->voucher_code = $this->generateRandomString(8);
                 $order->grand_total = $package->package_price;
@@ -204,7 +205,7 @@ class OrderController extends Controller
                 Session::forget('billing_country');
                 Session::forget('billing_zipcode');
                 
-                return redirect()->route('hold.order')->with('message', 'Order has been placed successfully');
+                return redirect()->route('orders')->with('message', 'Order has been placed successfully');
             } else {
                 return redirect()->back()->with('error', $response->getMessage());
             }

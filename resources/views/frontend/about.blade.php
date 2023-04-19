@@ -44,14 +44,7 @@
         </div>
     </div>
 </section>
-<section class="Section2 container">
-    <div class="Title">
-        <div class="Star"><img src="https://www.hotelgift.com/wp-content/themes/appgift2/images/About/star.svg"></div>
-        <h2>Where we spread happiness</h2>
-    </div>
-    <div class="Image"><img src="https://www.hotelgift.com/wp-content/themes/appgift2/images/About/globe.png"></div>
-    <div class="DottedLine"><img src="https://www.hotelgift.com/wp-content/themes/appgift2/images/About/dotted_line.svg"></div>
-</section>
+
 <section class="Section3 container">
     <div class="Title">
         <h2>Who we are</h2>

@@ -641,7 +641,8 @@ header .HeaderTop .NavigationContainer .top__nav a:hover {
 }
 
 .NavigationDesktop nav ul li {
-    padding-left: 30px
+    padding-left: 30px;
+    position:relative;
 }
 
 .NavigationDesktop nav ul li:first-child {

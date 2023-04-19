@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-Demo | Edit Customer Details
+{{env('APP_NAME')}} | Edit Customer Details
 @endsection
 @push('styles')
 @endpush
@@ -41,10 +41,17 @@ Demo | Edit Customer Details
                                     <div class="border p-4 rounded">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> Name <span style="color: red;">*</span></label>
-                                                <input type="text" name="name" id="" class="form-control" value="{{ $customer['name'] }}" placeholder="Enter Customer Name">
-                                                @if($errors->has('name'))
-                                                <div class="error" style="color:red;">{{ $errors->first('name') }}</div>
+                                                <label for="inputEnterYourName" class="col-form-label"> First Name <span style="color: red;">*</span></label>
+                                                <input type="text" name="first_name" id="" class="form-control" value="{{ $customer['first_name'] }}" placeholder="Enter Customer First Name">
+                                                @if($errors->has('first_name'))
+                                                <div class="error" style="color:red;">{{ $errors->first('first_name') }}</div>
+                                                @endif
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="inputEnterYourName" class="col-form-label"> Last Name <span style="color: red;">*</span></label>
+                                                <input type="text" name="last_name" id="" class="form-control" value="{{ $customer['last_name'] }}" placeholder="Enter Customer Last Name">
+                                                @if($errors->has('last_name'))
+                                                <div class="error" style="color:red;">{{ $errors->first('last_name') }}</div>
                                                 @endif
                                             </div>
                                             <div class="col-md-6">
@@ -61,23 +68,6 @@ Demo | Edit Customer Details
                                                 <div class="error" style="color:red;">{{ $errors->first('phone') }}</div>
                                                 @endif
                                             </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> City </label>
-                                                <input type="text" name="city" id="" class="form-control" value="{{ $customer['city'] }}" placeholder="City">
-                                               
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> Country </label>
-                                                <input type="text" name="country" id="" class="form-control" value="{{ $customer['country'] }}" placeholder="Country">
-                                              
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> Address <span style="color: red;">*</span></label>
-                                                <input type="text" name="address" id="" class="form-control" value="{{ $customer['address'] }}" placeholder="Address">
-                                                @if($errors->has('address'))
-                                                <div class="error" style="color:red;">{{ $errors->first('address') }}</div>
-                                                @endif
-                                            </div>
                                            
                                             <div class="col-md-6">
                                                 <label for="inputEnterYourName" class="col-form-label"> Password </label>
@@ -91,13 +81,6 @@ Demo | Edit Customer Details
                                                 <input type="password" name="confirm_password" id="" class="form-control" value="{{ $customer['confirm_password'] }}">
                                                 @if($errors->has('confirm_password'))
                                                 <div class="error" style="color:red;">{{ $errors->first('confirm_password') }}</div>
-                                                @endif
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEnterYourName" class="col-form-label"> Pin Code <span style="color: red;">*</span></label>
-                                                <input type="text" name="pincode" id="" class="form-control" value="{{ $customer['pincode'] }}" placeholder="Pincode">
-                                                @if($errors->has('pincode'))
-                                                <div class="error" style="color:red;">{{ $errors->first('pincode') }}</div>
                                                 @endif
                                             </div>
                                             <div class="col-md-6">
@@ -118,6 +101,7 @@ Demo | Edit Customer Details
                                                 <div class="error" style="color:red;">{{ $errors->first('profile_picture') }}</div>
                                                 @endif
                                             </div>
+                                            <div class="col-md-6"></div>
                                             @if($customer['profile_picture'])
                                             <div class="col-md-6">
                                                 <label for="inputEnterYourName" class="col-form-label">View Profile Picture </label>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forgot Password - Chat Box Admin Panel</title>
+    <title>Forgot Password - {{env('APP_NAME')}}</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin_assets/img/favicon.png') }}">
 
@@ -166,8 +166,8 @@
         <div class="cardStyle">
             <form action="{{ route('admin.change.password') }}" method="post" name="signupForm" id="signupForm">
                 @csrf
-                
-                <img src="{{ asset('admin_assets/img/logo2.png') }}" id="signupLogo" />
+
+                <img src="{{ asset('frontend_assets/img/logo.png') }}" id="signupLogo" />
 
                 <h2 class="formTitle">
                     Reset Password
@@ -177,10 +177,11 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">Password</label>
                         <div class="col-md-12">
-                            <input type="password" id="password-field1" class="form-control" name="password" value="">
+                            <input type="password" id="password-field1" class="form-control" name="password"
+                                value="">
                             <span toggle="#password-field1" class="fa fa-fw fa-eye field-icon toggle-password eye"
                                 id="ds"></span>
-                                @if ($errors->has('password'))
+                            @if ($errors->has('password'))
                                 <div class="error" style="color:red;">{{ $errors->first('password') }}
                                 </div>
                             @endif
@@ -191,9 +192,9 @@
                         <div class="col-md-12">
                             <input id="password-field" type="password" class="form-control" name="confirm_password"
                                 value="secret">
-                            <span toggle="#password-field"
-                                class="fa fa-fw fa-eye field-icon toggle-password eye" id="ps"></span>
-                                @if ($errors->has('confirm_password'))
+                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password eye"
+                                id="ps"></span>
+                            @if ($errors->has('confirm_password'))
                                 <div class="error" style="color:red;">{{ $errors->first('confirm_password') }}
                                 </div>
                             @endif
@@ -203,7 +204,7 @@
                 <div class="buttonWrapper">
                     <button type="submit" id="submitButton" onclick="validateSignupForm()"
                         class="submitButton pure-button pure-button-primary"
-                        style="background: linear-gradient(to right, #10acff 0%, #1f1f1f 100%); border-color:white;">
+                        style="background: linear-gradient(to right, #fd3103 0%, #1f1f1f 100%); border-color:white;">
                         <span>Continue</span>
                         {{-- <span id="loader"></span> --}}
                     </button>

@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-    All Customer Details - Derick Veliz admin
+    All Customer Details - {{env('APP_NAME')}}
 @endsection
 @push('styles')
 <style>
@@ -11,9 +11,7 @@
 @endpush
 
 @section('content')
-    @php
-        use App\Models\User;
-    @endphp
+
     <section id="loading">
         <div id="loading-content"></div>
     </section>
@@ -56,9 +54,6 @@
                                     <th> Name</th>
                                     <th> Email</th>
                                     <th> Phone</th>
-                                    <th>City</th>
-                                    <th>State</th>
-                                    <th>Address</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -66,12 +61,9 @@
                             <tbody>
                                 @foreach ($customers as $key => $customer)
                                     <tr>
-                                        <td>{{ $customer->name }}</td>
+                                        <td>{{ $customer->full_name }}</td>
                                         <td>{{ $customer->email }}</td>
                                         <td>{{ $customer->phone }}</td>
-                                        <td>{{ $customer->city }}</td>
-                                        <td>{{ $customer->country }}</td>
-                                        <td>{{ $customer->address }}</td>
                                         <td>
                                             <div class="button-switch">
                                                 <input type="checkbox" id="switch-orange" class="switch toggle-class"
@@ -109,11 +101,11 @@
                 "aaSorting": [],
                 "columnDefs": [{
                         "orderable": false,
-                        "targets": [6,7]
+                        "targets": [3,4]
                     },
                     {
                         "orderable": true,
-                        "targets": [0, 1, 2, 3, 4 ,5 ]
+                        "targets": [0, 1, 2]
                     }
                 ]
             });

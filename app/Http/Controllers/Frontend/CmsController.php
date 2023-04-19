@@ -30,4 +30,36 @@ class CmsController extends Controller
     {
         return view('frontend.hotels');
     }
+
+    // privacy policy
+    public function privacyPolicy()
+    {
+        return view('frontend.privacy-policy');
+    }
+
+    // terms and conditions
+    public function termsAndConditions()
+    {
+        return view('frontend.terms-and-conditions');
+    }
+
+    // australia
+    public function australia()
+    {
+        return view('frontend.australia');
+    }
+
+    // aus to new zealand
+    public function ausToNewZealand()
+    {
+        return view('frontend.aus-to-new-zealand');
+    }
+
+    // new zealand
+    public function newZealandToBali()
+    {
+        return view('frontend.new-zealand-to-bali');
+    }
+
+
 }

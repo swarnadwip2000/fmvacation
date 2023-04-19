@@ -5,6 +5,11 @@
     {{ env('APP_NAME') }} |  Our Hotels
 @endsection
 @push('styles')
+<style>
+    .error {
+        color: red;
+    }
+</style>
 @endpush
 
 
@@ -55,7 +60,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> Pierpoint Road, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> Pierpoint Road, 4870 Cairns, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +97,9 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 35-41 Wharf Street, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 35-41 Wharf Street, 4870 Cairns, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -127,7 +135,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 17 Abbott Street, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 17 Abbott Street, 4870 Cairns, Australia</p>  
+                                    <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +172,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 7 - 11 Chester Court, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 7 - 11 Chester Court, 4870 Cairns, Australia</p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +209,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i>  43 The Esplanade, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i>  43 The Esplanade, 4870 Cairns, Australia</p> 
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -235,7 +246,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 122 Lake Street, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 122 Lake Street, 4870 Cairns, Australia</p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +283,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 34 Esplanade, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 34 Esplanade, 4870 Cairns, Australia</p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -307,7 +320,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 131-141 The Esplanade, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 131-141 The Esplanade, 4870 Cairns, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -343,7 +357,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 163 Abbott Street, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 163 Abbott Street, 4870 Cairns, Australia</p>    
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -379,7 +394,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 18-26 Cannon Street, 4870 Cairns, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 18-26 Cannon Street, 4870 Cairns, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -415,7 +431,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i>  171 Pacific Highway, North Sydney, 2060 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i>  171 Pacific Highway, North Sydney, 2060 Sydney, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -451,7 +468,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 89-119 Kent Street, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 89-119 Kent Street, Sydney CBD, 2000 Sydney, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -487,7 +505,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 Martin Place, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 Martin Place, Sydney CBD, 2000 Sydney, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -523,7 +542,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 300 Kent Street, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 300 Kent Street, Sydney CBD, 2000 Sydney, Australia</p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -559,7 +579,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 161 Elizabeth Street, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 161 Elizabeth Street, Sydney CBD, 2000 Sydney, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -595,7 +616,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 176 Cumberland Street, The Rocks, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 176 Cumberland Street, The Rocks, Sydney CBD, 2000 Sydney, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -631,7 +653,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 389 Pitt Street, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 389 Pitt Street, Sydney CBD, 2000 Sydney, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -667,7 +690,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 7 Hickson Road, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 7 Hickson Road, Sydney CBD, 2000 Sydney, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -703,7 +727,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 17 Little Pier Street, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 17 Little Pier Street, Sydney CBD, 2000 Sydney, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -739,7 +764,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> Corner of Phillip and Bridge Streets, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> Corner of Phillip and Bridge Streets, Sydney CBD, 2000 Sydney, Australia</p>    
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -775,7 +801,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 199 George Street, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 199 George Street, Sydney CBD, 2000 Sydney, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -811,7 +838,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 Barangaroo Ave, Sydney CBD, 2000 Sydney, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 Barangaroo Ave, Sydney CBD, 2000 Sydney, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -847,7 +875,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 600 Little Bourke Street, 3000 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 600 Little Bourke Street, 3000 Melbourne, Australia</p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -883,7 +912,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 205 Collins Street, 3000 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 205 Collins Street, 3000 Melbourne, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -919,7 +949,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 Southgate Avenue, Southbank, 3006 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 Southgate Avenue, Southbank, 3006 Melbourne, Australia</p>    
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -955,7 +986,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 27 Little Collins Street, 3000 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 27 Little Collins Street, 3000 Melbourne, Australia</p> 
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -991,7 +1023,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 Parliament Square, Off Parliament Place, East Melbourne, 3002 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 Parliament Square, Off Parliament Place, East Melbourne, 3002 Melbourne, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1027,7 +1060,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 202 Normanby Road, Southbank, 3006 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 202 Normanby Road, Southbank, 3006 Melbourne, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1063,7 +1097,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 270 Collins Street, 3000 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 270 Collins Street, 3000 Melbourne, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1099,7 +1134,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 15 Waterfront Way, Docklands, Docklands, 3008 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 15 Waterfront Way, Docklands, Docklands, 3008 Melbourne, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1135,7 +1171,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 131 Lonsdale Street, 3000 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 131 Lonsdale Street, 3000 Melbourne, Australia</p>      
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1171,7 +1208,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 123 Collins Street, 3000 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 123 Collins Street, 3000 Melbourne, Australia</p> 
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1207,7 +1245,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 - 5 Spencer Street, 3008 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 - 5 Spencer Street, 3008 Melbourne, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1243,7 +1282,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 8 Whiteman Street, Southbank, 3006 Melbourne, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 8 Whiteman Street, Southbank, 3006 Melbourne, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1279,7 +1319,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 Rogan Street, Canberra International Airport, 2609 Canberra, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 Rogan Street, Canberra International Airport, 2609 Canberra, Australia </p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1315,7 +1356,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> Cnr Canberra Ave &amp; National Cct, Forrest, 2603 Canberra, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> Cnr Canberra Ave &amp; National Cct, Forrest, 2603 Canberra, Australia </p>    
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1351,7 +1393,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 242 Northbourne Avenue, 2602 Canberra, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 242 Northbourne Avenue, 2602 Canberra, Australia </p> 
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1387,7 +1430,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 25 Edinburgh Avenue, 2601 Canberra, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 25 Edinburgh Avenue, 2601 Canberra, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1423,7 +1467,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 65 Northbourne Avenue, 2600 Canberra, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 65 Northbourne Avenue, 2600 Canberra, Australia </p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1459,7 +1504,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 Elouera Street, Braddon, 2612 Canberra, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 Elouera Street, Braddon, 2612 Canberra, Australia</p>    
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1495,7 +1541,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 21 Stephen Street, 2602 Canberra, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 21 Stephen Street, 2602 Canberra, Australia </p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1531,7 +1578,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 120 Commonwealth Avenue, Yarralumla, 2600 Canberra, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 120 Commonwealth Avenue, Yarralumla, 2600 Canberra, Australia </p>      
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1567,7 +1615,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 18 National Circuit, Barton, 2603 Canberra, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 18 National Circuit, Barton, 2603 Canberra, Australia </p>
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1603,7 +1652,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 Binara Street, 2601 Canberra, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 Binara Street, 2601 Canberra, Australia</p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1639,7 +1689,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 31 Hamilton Avenue, Surfers' Paradise, 4217 Gold Coast, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 31 Hamilton Avenue, Surfers' Paradise, 4217 Gold Coast, Australia </p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1675,7 +1726,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 8 Casino Drive, Broadbeach, 4218 Gold Coast, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 8 Casino Drive, Broadbeach, 4218 Gold Coast, Australia</p>
+                                    <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1711,7 +1763,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i>  38 Old Burleigh Road, Surfers' Paradise, 4217 Gold Coast, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i>  38 Old Burleigh Road, Surfers' Paradise, 4217 Gold Coast, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1747,7 +1800,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i>  7 Staghorn Avenue, Surfers' Paradise, 4217 Gold Coast, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i>  7 Staghorn Avenue, Surfers' Paradise, 4217 Gold Coast, Australia</p> 
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1783,7 +1837,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> Cnr Hanlan St and Surfers Paradise Blvd, Surfers' Paradise, 4217 Gold Coast, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> Cnr Hanlan St and Surfers Paradise Blvd, Surfers' Paradise, 4217 Gold Coast, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1819,7 +1874,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 86 The Esplanade, Surfers' Paradise, 4217 Gold Coast, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 86 The Esplanade, Surfers' Paradise, 4217 Gold Coast, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1855,7 +1911,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i>  Como Crescent, Southport, 4215 Gold Coast, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i>  Como Crescent, Southport, 4215 Gold Coast, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1891,7 +1948,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 2669 Gold Coast Highway, Broadbeach, 4218 Gold Coast, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 2669 Gold Coast Highway, Broadbeach, 4218 Gold Coast, Australia </p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1927,7 +1985,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 6 Orchid Avenue, Surfers' Paradise, 4217 Gold Coast, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 6 Orchid Avenue, Surfers' Paradise, 4217 Gold Coast, Australia </p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1963,7 +2022,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 Casino Drive, Broadbeach, 4218 Gold Coast, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 Casino Drive, Broadbeach, 4218 Gold Coast, Australia </p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -1999,7 +2059,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 480 Hay Street, Perth Central Business District, 6000 Perth, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 480 Hay Street, Perth Central Business District, 6000 Perth, Australia </p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2035,7 +2096,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 Barrack Street, Perth Central Business District, 6000 Perth, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 Barrack Street, Perth Central Business District, 6000 Perth, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2071,7 +2133,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 207 Adelaide Terrace , East Perth, 6000 Perth, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 207 Adelaide Terrace , East Perth, 6000 Perth, Australia </p>      
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2107,7 +2170,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 388 Murray Street ., Perth Central Business District, 6000 Perth, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 388 Murray Street ., Perth Central Business District, 6000 Perth, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2143,7 +2207,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 815 Hay Street, Perth Central Business District, 6000 Perth, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 815 Hay Street, Perth Central Business District, 6000 Perth, Australia</p>    
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2179,7 +2244,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 334 Murray Street, Perth Central Business District, 6000 Perth, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 334 Murray Street, Perth Central Business District, 6000 Perth, Australia</p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2215,7 +2281,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 99 Adelaide Terrace, East Perth, 6000 Perth, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 99 Adelaide Terrace, East Perth, 6000 Perth, Australia </p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2251,7 +2318,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 1 St.George's Terrace, Perth Central Business District, 6000 Perth, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 1 St.George's Terrace, Perth Central Business District, 6000 Perth, Australia</p>    
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2287,7 +2355,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 00 James St , Northbridge, 6003 Perth, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 00 James St , Northbridge, 6003 Perth, Australia</p> 
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2323,7 +2392,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 27 Rowe Avenue, Rivervale, 6103 Perth, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 27 Rowe Avenue, Rivervale, 6103 Perth, Australia </p>      
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2359,7 +2429,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 81 North Quay, Brisbane Central Business District, 4000 Brisbane, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 81 North Quay, Brisbane Central Business District, 4000 Brisbane, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2395,7 +2466,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 130 William St, Brisbane Central Business District, 4001 Brisbane, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 130 William St, Brisbane Central Business District, 4001 Brisbane, Australia</p>
+                                    <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2431,7 +2503,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> Corner of Edward Street &amp; Margaret Street, Brisbane Central Business District, 4000 Brisbane</p>                                   
+                                    <p><i class="ph-map-pin"></i> Corner of Edward Street &amp; Margaret Street, Brisbane Central Business District, 4000 Brisbane</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2467,7 +2540,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 15 Ivory Lane, Brisbane Central Business District, 4000 Brisbane, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 15 Ivory Lane, Brisbane Central Business District, 4000 Brisbane, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2503,7 +2577,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 43 Herschel Street, Brisbane Central Business District, 4000 Brisbane, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 43 Herschel Street, Brisbane Central Business District, 4000 Brisbane, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2539,7 +2614,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 485 Adelaide Street, Brisbane Central Business District, 4000 Brisbane, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 485 Adelaide Street, Brisbane Central Business District, 4000 Brisbane, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2575,7 +2651,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 23 Leichhardt Street, Spring Hill, 4000 Brisbane, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 23 Leichhardt Street, Spring Hill, 4000 Brisbane, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2611,7 +2688,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i>  267 Grey Street, South Brisbane, 4101 Brisbane, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i>  267 Grey Street, South Brisbane, 4101 Brisbane, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2647,7 +2725,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 5 Boundary Street, Brisbane Central Business District, 4000 Brisbane, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 5 Boundary Street, Brisbane Central Business District, 4000 Brisbane, Australia</p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2683,7 +2762,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 200 Creek Street, Spring Hill, 4000 Brisbane, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 200 Creek Street, Spring Hill, 4000 Brisbane, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2719,7 +2799,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> North Terrace, Adelaide Central Business District, 5000 Adelaide, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> North Terrace, Adelaide Central Business District, 5000 Adelaide, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2755,7 +2836,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> Moseley Square, Glenelg, Glenelg, 5045 Adelaide, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> Moseley Square, Glenelg, Glenelg, 5045 Adelaide, Australia</p>     
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2791,7 +2873,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 16 Hindmarsh Square, Adelaide Central Business District, 5000 Adelaide, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 16 Hindmarsh Square, Adelaide Central Business District, 5000 Adelaide, Australia</p>    
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2827,7 +2910,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> King William Rd, 5006 Adelaide, Australia – Excellent location – show map</p>                                   
+                                    <p><i class="ph-map-pin"></i> King William Rd, 5006 Adelaide, Australia – Excellent location – show map</p>    
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2863,7 +2947,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 45 King William Street, Adelaide Central Business District, 5000 Adelaide, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 45 King William Street, Adelaide Central Business District, 5000 Adelaide, Australia </p> 
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2899,7 +2984,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 55 Frome Street, Adelaide Central Business District, 5000 Adelaide, Australia </p>                                   
+                                    <p><i class="ph-map-pin"></i> 55 Frome Street, Adelaide Central Business District, 5000 Adelaide, Australia </p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2935,7 +3021,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 122 Grenfell Street, Adelaide Central Business District, 5000 Adelaide, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 122 Grenfell Street, Adelaide Central Business District, 5000 Adelaide, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -2971,7 +3058,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 65 Hindley Street, Adelaide Central Business District, 5000 Adelaide, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 65 Hindley Street, Adelaide Central Business District, 5000 Adelaide, Australia</p> 
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -3007,7 +3095,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 233 Victoria Square, Adelaide Central Business District, 5000 Adelaide, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 233 Victoria Square, Adelaide Central Business District, 5000 Adelaide, Australia</p>   
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -3043,7 +3132,8 @@
                                         <li><i class="ph-star"></i></li>
                                         <li><i class="ph-star"></i></li>
                                     </ul>
-                                    <p><i class="ph-map-pin"></i> 31-34 North Terrace, Adelaide Central Business District, 5000 Adelaide, Australia</p>                                   
+                                    <p><i class="ph-map-pin"></i> 31-34 North Terrace, Adelaide Central Business District, 5000 Adelaide, Australia</p>  
+                                     <a data-toggle="modal" data-target="#hotel_book_modal" href="#" class="btn btn-block btn-warning">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -3057,10 +3147,142 @@
         </div>
     </div>
 </section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="hotel_book_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content modal_bg_l">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Book Hotel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="">
+            <form method="post" class="create-form" action="{{ route('book.hotel') }}">
+                @csrf
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="">Name:</label>
+                        <input type="text" class="form-control" name="name" id="name" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Email:</label>
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Phone Number:</label>
+                        <input type="texty" class="form-control" name="phone" id="phone" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">booking Date:</label>
+                        <input type="date" class="form-control" name="booking_date" id="booking_date" aria-describedby="" placeholder="" min="{{date('Y-m-d')}}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Booking From:</label>
+                        <input type="date" class="form-control" name="booking_from" id="booking_from" aria-describedby="" placeholder="" min="{{date('Y-m-d')}}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Booking to:</label>
+                        <input type="date" class="form-control" name="booking_to" id="booking_to" aria-describedby="" placeholder="" min="{{date('Y-m-d')}}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Adults:</label>
+                        <input type="text" class="form-control" name="adults_number" id="" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Location:</label>
+                        <input type="text" class="form-control" name="location" id="location" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
     <div loading="lazy" class="top__footer"></div>
 @endsection
 
 @push('scripts')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+<script>
+    $('.create-form').validate({
+        rules: {
+            'name': {
+                required: true,
+            },
+            'email': {
+                required: true,
+                email: true,
+            },
+            'phone': {
+                required: true,
+                number: true,
+            },
+            'booking_date': {
+                required: true,
+            },
+            'booking_from': {
+                required: true,
+            },
+            'booking_to': {
+                required: true,
+            },
+            'adults_number': {
+                required: true,
+                number: true,
+            },
+            'location': {
+                required: true,
+            },
+        },
+
+        messages: {
+            'name': {
+                required: 'Please enter your name',
+            },
+            'email': {
+                required: 'Please enter your email',
+                email: 'Please enter a valid email',
+            },
+            'phone': {
+                required: 'Please enter your phone number',
+                number: 'Please enter a valid phone number',
+            },
+            'booking_date': {
+                required: 'Please enter your booking date',
+            },
+            'booking_from': {
+                required: 'Please enter your booking from',
+            },
+            'booking_to': {
+                required: 'Please enter your booking to',
+            },
+            'adults_number': {
+                required: 'Please enter your adults number',
+                number: 'Please enter a valid adults number',
+            },
+            'location': {
+                required: 'Please enter your location',
+            },
+        },
+
+    });
+</script>
+
 <script type="application/javascript">
     $('.filters ul li').click(function(){
   $('.filters ul li').removeClass('active');

@@ -257,6 +257,13 @@
     width: calc(100% - 60px);
   }
 
+.modal_bg_l .modal-header{
+    background:#ff2c1b;;
+}
+.modal_bg_l .modal-header .modal-title{
+    color:#fff;
+}
+
 
 
 @media (max-width: 767px) {

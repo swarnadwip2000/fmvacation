@@ -2782,7 +2782,12 @@ span.step_count {
 
   /*---- Profile -----*/
   
-  
+.bg_color_avbb abbr{
+    background: #2bd40f;
+}
+.bg_color_avbb ul{
+    padding-left: 25px;
+}
 
 
 

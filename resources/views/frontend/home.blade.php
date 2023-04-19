@@ -188,11 +188,7 @@
         </div>
     </section>
     <section class="Section3">
-        <div class="FactsStarDesktop"><img alt="FM Vacation" loading="lazy"
-                src="{{ asset('frontend_assets/img/FactsStarDesktop.svg') }}">
-        </div>
-        <div class="FactsStarMobile"><img alt="FM Vacation" loading="lazy"
-                src="{{ asset('frontend_assets/img/FactsStarMobile.svg') }}"></div>
+        
         <div class="Title">Made to spread happiness</div>
         <div class="FactsDesktop">
             <div class="Facts Row1">

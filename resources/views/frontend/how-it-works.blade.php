@@ -9,7 +9,7 @@
 
 
 @section('content')
-<section class="Section1 container" style="padding-top: 50px">
+<section class="Section1 container d-block" style="padding-top: 50px">
     <div class="Titles">
         <div class="Row1">
             <div class="Title">The gift of staying at their favorite hotel.
@@ -90,7 +90,7 @@
             <div class="Image MainImage"><img src="{{asset('frontend_assets/img/hotel-checkin.png')}}"></div>
         </div>
         <div class="Action">
-            <a class="Button" href="#">CREATE HOTELGIFT</a>
+            <a class="Button" href="#">CREATE FMVACATION</a>
         </div>
     </div>
 </section>
@@ -139,7 +139,6 @@
     </div>
 </section>
 <section class="Section4 container">
-    <img class="DottedStar" src="{{asset('frontend_assets/img/FactsStarDesktop.svg')}}">
     <div class="Titles">
         <h2>Happiness, guaranteed.</h2>
         <h3>Our helpful team is here to answer your questions.</h3>

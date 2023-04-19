@@ -29,13 +29,7 @@ class ProfileController extends Controller
         return view('frontend.profile');
     }
 
-    public function activeOrder($id)
-    {
-        Order::where('id', $id)->update(['order_status' => true]);
-        $order = Order::find($id);
-        Mail::to($order->send_to)->send(new SendVoucherCode($order));
-        return redirect()->route('orders')->with('message', 'Order has been activated');
-    }
+    
     
     public function downloadPdf($id)
     {

@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-    Dashboard - Demo admin
+    Dashboard - {{env('APP_NAME')}} admin
 @endsection
 @push('styles')
 @endpush
@@ -23,35 +23,39 @@
 
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                    <a href="{{ route('orders.hold') }}" style="color: black">
                     <div class="card dash-widget">
                         <div class="card-body">
-                            <span class="dash-widget-icon"><i class="fa fa-cubes"></i></span>
+                            <span class="dash-widget-icon"><i class="la la-shopping-bag"></i></span>
                             <div class="dash-widget-info">
-                                <h3>112</h3>
-                                <span>Total Products</span>
+                                <h3>{{ $count['hold_order'] }}</h3>
+                                <span>Total Hold Order</span>
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                    <a href="{{ route('orders.index') }}" style="color: black">
                     <div class="card dash-widget">
                         <div class="card-body">
-                            <span class="dash-widget-icon"><i class="fa fa-usd"></i></span>
+                            <span class="dash-widget-icon"><i class="la la-shopping-cart"></i></span>
                             <div class="dash-widget-info">
-                                <h3>44</h3>
-                                <span>Total Categories</span>
+                                <h3>{{ $count['order'] }}</h3>
+                                <span>Total Order</span>
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
-                    <a href="{{ route('sellers.index') }}" style="color: black">
+                    <a href="" style="color: black">
                     <div class="card dash-widget">
                         <div class="card-body">
-                            <span class="dash-widget-icon"><i class="fa fa-users"></i></span>
+                            <span class="dash-widget-icon"><i class="la la-shopping-cart"></i></span>
                             <div class="dash-widget-info">
-                                <h3>{{ $count['seller'] }}</h3>
-                                <span>Total Sellers</span>
+                                <h3>{{ $count['order_this_month'] }}</h3>
+                                <span>Total Order This Month</span>
                             </div>
                         </div>
                     </div>
@@ -64,7 +68,7 @@
                                 <span class="dash-widget-icon"><i class="fa fa-user"></i></span>
                                 <div class="dash-widget-info">
                                     <h3>{{ $count['user'] }}</h3>
-                                    <span>Total user</span>
+                                    <span>Total User</span>
                                 </div>
                             </div>
                         </div>

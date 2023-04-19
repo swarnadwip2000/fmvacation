@@ -22,7 +22,7 @@
                                     <!-- <li>
                                     <a href="">Our Hotels</a>
                                 </li> -->
-                                    <li class="nav-item ">
+                                    <li class="menu-about">
                                         <a class="" href="{{ route('our-hotels') }}" id=""
                                             role="" data-toggle="" aria-haspopup=""
                                             aria-expanded="">
@@ -79,12 +79,11 @@
                                     <li class="menu-home"><a href="{{ route('home') }}"><span>HOME</span></a></li>
                                     <!-- <li class="menu-create"><a href="#"><span>GIVE</span></a></li>
                                 <li class="menu-redeem"><a href="#"><span>REDEEM</span></a></li> -->
-                                    <li class="nav-item ">
+                                    <li class="menu-home ">
                                         <a class="" href="{{ route('our-hotels') }}" id=""
                                             role="" data-toggle="" aria-haspopup=""
                                             aria-expanded="">
-                                            <span>{{ Request::is('package/*') ? 'Package' : '' }}{{ Request::is('how-it-works/*') ? 'How it works' : '' }}{{ Request::is('about-us/*') ? 'About Us' : '' }}
-                                                {{ Request::is('our-package/*') ? 'Our Package' : '' }}{{ Request::is('cart/*') ? 'Cart' : '' }}{{ Request::is('checkout/*') ? 'Checkout' : '' }}</span>
+                                            <span>OUR HOTELS</span>
                                         </a>
                                         {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="hotels.html">Sydney</a>
@@ -101,11 +100,11 @@
                                                 WORKS</span></a></li>
                                     <li class="menu-about"><a href="{{ route('about-us') }}"><span>ABOUT
                                                 US</span></a></li>
-                                    <li><a href="{{ route('our-package') }}"><span>Our Package</span></a></li>
+                                    <li class="menu-about"><a href="{{ route('our-package') }}"><span>Our Package</span></a></li>
                                     @if (Auth::check() && Auth::user()->hasRole('USER'))
-                                        <li><a href="{{ route('profile') }}">Profile</a></li>
+                                        <li class="menu-about"><a href="{{ route('profile') }}">Profile</a></li>
                                     @else
-                                        <li><a href="{{ route('login') }}">Login</a></li>
+                                        <li class="menu-about"><a href="{{ route('login') }}">Login</a></li>
                                     @endif
                                     <li class="menucart"><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i></a>    <div id="mini-cart-count">
                                         {{ Helper::countCartPackage() }}    </div>
@@ -162,7 +161,7 @@
                                     <!-- <li>
                                                 <a href="">Our Hotels</a>
                                             </li> -->
-                                    <li class="nav-item ">
+                                    <li class="menu-about">
                                         <a class="" href="{{route('our-hotels')}}" id="" role=""
                                             data-toggle="" aria-haspopup="" aria-expanded="">
                                             Our Hotels
@@ -183,9 +182,9 @@
                                                 WORKS</span></a></li>
                                     <li class="menu-about"><a href="{{ route('about-us') }}"><span>ABOUT
                                                 US</span></a></li>
-                                    <li><a href="{{ route('our-package') }}"><span>Our Package</span></a></li>
+                                    <li class="menu-about"><a href="{{ route('our-package') }}"><span>Our Package</span></a></li>
                                     @if (Auth::check() && Auth::user()->hasRole('USER'))
-                                    <li><a href="{{ route('profile') }}">Profile</a></li>
+                                    <li class="menu-about"><a href="{{ route('profile') }}">Profile</a></li>
                                 @else
                                     <li><a href="{{ route('login') }}">Login</a></li>
                                 @endif
@@ -220,11 +219,10 @@
                                     <li class="menu-home"><a href="{{ route('home') }}"><span>HOME</span></a></li>
                                     <!-- <li class="menu-create"><a href="#"><span>GIVE</span></a></li>
                                             <li class="menu-redeem"><a href="#"><span>REDEEM</span></a></li> -->
-                                    <li class="nav-item ">
-                                        <a class="dropdown-toggle" href="{{route('our-hotels')}}" id="" role=""
+                                    <li class="menu-about">
+                                        <a class="" href="{{route('our-hotels')}}" id="" role=""
                                             data-toggle="" aria-haspopup="" aria-expanded="">
-                                            <span>{{ Request::is('package/*') ? 'Package' : '' }}{{ Request::is('how-it-works/*') ? 'How it works' : '' }}{{ Request::is('about-us/*') ? 'About Us' : '' }}
-                                                {{ Request::is('our-package/*') ? 'Our Package' : '' }}{{ Request::is('cart/*') ? 'Cart' : '' }}{{ Request::is('checkout/*') ? 'Checkout' : '' }}</span>
+                                            <span>OUR HOTELS</span>
                                         </a>
                                         {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="hotels.html">Sydney</a>
@@ -243,9 +241,9 @@
                                         US</span></a></li>
                             <li><a href="{{ route('our-package') }}"><span>Our Package</span></a></li>
                             @if (Auth::check() && Auth::user()->hasRole('USER'))
-                                    <li><a href="{{ route('profile') }}">Profile</a></li>
+                                    <li class="menu-about"><a href="{{ route('profile') }}">Profile</a></li>
                                 @else
-                                    <li><a href="{{ route('login') }}">Login</a></li>
+                                    <li class="menu-about"><a href="{{ route('login') }}">Login</a></li>
                                 @endif
                                 <li class="menucart"><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i></a>    <div id="mini-cart-count">
                                     {{ Helper::countCartPackage() }}    </div>
@@ -258,8 +256,10 @@
                 </div>
             </div>
             <div class="HeaderContentRest">
-                <h1>{{ Request::is('package/*') ? 'Package' : '' }}{{ Request::is('how-it-works/*') ? 'How it works' : '' }}{{ Request::is('about-us/*') ? 'About Us' : '' }}
-                    {{ Request::is('our-package/*') ? 'Our Package' : '' }}{{ Request::is('cart/*') ? 'Cart' : '' }}{{ Request::is('checkout/*') ? 'Checkout' : '' }}
+                <h1>{{ Request::is('package/*') ? 'Package' : '' }}{{ Request::is('how-it-works') ? 'How it works' : '' }}{{ Request::is('about-us') ? 'About Us' : '' }}
+                    {{ Request::is('our-package') ? 'Our Package' : '' }}{{ Request::is('cart') ? 'My Cart' : '' }}
+                    {{ Request::is('checkout') ? 'Checkout' : '' }} {{ Request::is('profile') || Request::is('orders') || Request::is('change-password') ? 'My profile' : '' }}{{ Request::is('our-hotels') ? 'Our Hotels' : '' }}{{ Request::is('cart/*') ? 'Cart' : '' }}{{ Request::is('checkout/*') ? 'Checkout' : '' }}
+                    {{ Request::is('new-zealand-to-bali') ? 'Newzeland to Bali' : '' }}{{ Request::is('aus-to-new-zealand') ? 'Austrelia to Newzeland' : '' }}{{ Request::is('australia') ? 'Austrelia' : '' }}
                 </h1>
                 <p></p>
             </div>

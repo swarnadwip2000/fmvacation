@@ -7,7 +7,10 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\Admin\EnqueryConrtoller;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\SellerController;
+use App\Http\Controllers\Frontend\BookController;
 use App\Http\Controllers\Frontend\CmsController;
 use App\Http\Controllers\User\AuthController as UserAuthController;
 use App\Http\Controllers\User\CartController;
@@ -34,7 +37,8 @@ Route::get('clear', function () {
 });
 
 Route::prefix('admin')->group(function () {
-    Route::get('/', [AuthController::class, 'login'])->name('admin.login');
+    Route::get('/', [AuthController::class, 'redirectAdminLogin']);
+    Route::get('/login', [AuthController::class, 'login'])->name('admin.login');
     Route::post('/login-check', [AuthController::class, 'loginCheck'])->name('admin.login.check');  //login check
     Route::post('forget-password', [ForgetPasswordController::class, 'forgetPassword'])->name('admin.forget.password');
     Route::post('change-password', [ForgetPasswordController::class, 'changePassword'])->name('admin.change.password');
@@ -62,6 +66,25 @@ Route::group(['middleware' => ['admin'], 'prefix' => 'admin'], function () {
         Route::get('/customer-delete/{id}', [CustomerController::class, 'delete'])->name('customers.delete');
     });
     Route::get('/changeCustomerStatus', [CustomerController::class, 'changeCustomersStatus'])->name('customers.change-status');
+
+    Route::prefix('orders')->name('orders.')->group(function () {
+        // order
+        Route::get('/list', [AdminOrderController::class, 'index'])->name('index');
+        Route::get('/hold-order', [AdminOrderController::class, 'holdOrder'])->name('hold');
+        // active order
+        Route::get('/active-order/{id}', [AdminOrderController::class, 'activeOrder'])->name('active.order');
+        Route::get('/resend-voucher/{id}', [AdminOrderController::class, 'resendVoucher'])->name('resend.voucher');
+        Route::get('/download.voucher/{id}', [AdminOrderController::class, 'downloadVoucher'])->name('download.voucher');
+        Route::get('/view/{id}', [AdminOrderController::class, 'view'])->name('view');
+        Route::get('/edit/{id}', [AdminOrderController::class, 'edit'])->name('edit');
+        Route::post('/update', [AdminOrderController::class, 'update'])->name('update');
+    });
+
+    // enquiry
+    Route::prefix('enquiry')->name('enquiry.')->group(function () {
+        Route::get('/', [EnqueryConrtoller::class, 'enquiry'])->name('index');
+    });
+    
 });
 
 
@@ -79,6 +102,20 @@ Route::get('about-us', [CmsController::class, 'aboutUs'])->name('about-us');
 Route::get('how-it-works', [CmsController::class, 'howItWorks'])->name('how-it-works');
 // our hotels
 Route::get('our-hotels', [CmsController::class, 'ourHotels'])->name('our-hotels');
+// privacy policy
+Route::get('privacy-policy', [CmsController::class, 'privacyPolicy'])->name('privacy-policy');
+// terms and conditions
+Route::get('terms-and-conditions', [CmsController::class, 'termsAndConditions'])->name('terms-and-conditions');
+// australia
+Route::get('australia', [CmsController::class, 'australia'])->name('australia');
+// aus to new zealand
+Route::get('aus-to-new-zealand', [CmsController::class, 'ausToNewZealand'])->name('aus-to-new-zealand');
+// New Zealand
+Route::get('new-zealand-to-bali', [CmsController::class, 'newZealandToBali'])->name('new-zealand-to-bali');
+
+// Bali
+Route::get('bali', [CmsController::class, 'bali'])->name('bali');
+
 // our package routes
 Route::get('our-package', [PackageController::class, 'ourPackage'])->name('our-package');
 Route::get('package/{id}', [PackageController::class, 'package'])->name('package');
@@ -87,6 +124,7 @@ Route::get('cart', [CartController::class, 'cart'])->name('cart');
 // add to cart
 Route::post('add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
 Route::post('remove-cart', [CartController::class, 'cartRemove'])->name('frontend.cart.remove');
+Route::post('book-hotel', [BookController::class, 'bookHotel'])->name('book.hotel');
 
 Route::middleware('user')->group(function () {
     Route::get('checkout', [OrderController::class, 'checkout'])->name('checkout');
@@ -104,7 +142,7 @@ Route::middleware('user')->group(function () {
     // profile
     Route::get('profile', [UserProfileController::class, 'profile'])->name('profile');
     Route::post('profile-update', [UserProfileController::class, 'profileUpdate'])->name('profile.update');
-    Route::get('active-order/{id}', [UserProfileController::class, 'activeOrder'])->name('active.order');
+    
     Route::get('resend-mail/{id}', [UserProfileController::class, 'resendMil'])->name('resend.mail');
     Route::get('download-pdf/{id}', [UserProfileController::class, 'downloadPdf'])->name('download.pdf');
     // change password

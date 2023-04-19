@@ -36,43 +36,16 @@
         </div>
     </div>
 
-    <div class="footer__logo">
-        <img loading="lazy" src="{{asset('frontend_assets/img/experiencegift-box.svg')}}" alt="experiencegift-box">
-    </div>
-    <div class="footer__brands">
-        <a target="_blank" href="#">
-            <img loading="lazy" src="{{asset('frontend_assets/img/hotelgift-logo_w_noexp.svg')}}" alt="fmvacation-logo">
-        </a>
-        <a target="_blank" href="#">
-            <img loading="lazy" src="{{asset('frontend_assets/img/flightgift-logo_w_noexp.svg')}}" alt="flightgift-logo">
-        </a>
-        <a target="_blank" href="#">
-            <img loading="lazy" src="{{asset('frontend_assets/img/cruisegift-logo_w_noexp.svg')}}" alt="cruisegift-logo">
-        </a>
-        <a target="_blank" href="#">
-            <img loading="lazy" src="{{asset('frontend_assets/img/activitygift-logo_w_noexp.svg')}}" alt="activitygift-logo">
-        </a>
-    </div>
+    <!--<div class="footer__logo">-->
+    <!--    <img loading="lazy" src="{{asset('frontend_assets/img/experiencegift-box.svg')}}" alt="experiencegift-box">-->
+    <!--</div>-->
+   
     <div class="footer__widgets">
         <div class="widgets__row">
-            <div class="footer__menu column">
-                <div class="menu__title">
-                    FM Vacation </div>
-                <div class="menu " style="display:flex;">
-                    <ul id="menu-footer-menu-english-us" class="footermenulefta">
-                        <li><a href="{{ route('home') }}" aria-current="page">Home</a></li>
-                        <li><a href="{{ route('about-us') }}">About us</a></li>
-                        <li><a href="javascript:void(0);">Contact us</a></li>
-                    </ul>
-                    <ul id="menu-footer-menu-b-english-us" class="footermenuleftb">
-                        <li><a href="{{ route('how-it-works') }}">How it works</a></li>
-                        <li><a href="corporate-gift.html">Corporate gifts</a></li>
-                        <li><a href="join.html">Join us</a></li>
-                    </ul>
+            <div class="footer__contact column pr-3">
+                <div class="menu_logo">
+                    <a href=""><img loading="lazy" src="{{asset('frontend_assets/img/logo_white.png')}}" alt="experiencegift-box"></a>
                 </div>
-            </div>
-            <div class="footer__contact column">
-                <div class="menu__title">Our office</div>
                 <div class="contact__info">
                     <address class="address">
                         <span class="map__marker"></span>
@@ -84,7 +57,51 @@
                         </a>
                     </div>
                 </div>
+                <div class="footer__social">
+                    <a target="_blank" href="#">
+                        <img loading="lazy" src="{{asset('frontend_assets/img/fb-ro.svg')}}" alt="">
+                    </a>
+                    <a target="_blank" href="#">
+                        <img loading="lazy" src="{{asset('frontend_assets/img/ln-ro.svg')}}" alt="">
+                    </a>
+                    <a target="_blank" href="#">
+                        <img loading="lazy" src="{{asset('frontend_assets/img/ig-ro.svg')}}" alt="">
+                    </a>
+                </div>
             </div>
+            <div class="footer__menu column">
+                <div class="menu__title">
+                    FM Vacation </div>
+                <div class="menu " style="display:flex;">
+                    <ul id="menu-footer-menu-english-us" class="footermenulefta">
+                        <li><a href="{{ route('home') }}" aria-current="page">Home</a></li>
+                        <li><a href="{{ route('our-hotels') }};">Our Hotels</a></li>   
+                        <li><a href="{{ route('about-us') }}">About us</a></li>
+                    </ul>
+                    <ul id="menu-footer-menu-b-english-us" class="footermenuleftb">
+                        <li><a href="{{ route('how-it-works') }}">How it works</a></li>
+                        <li><a href="{{ route('our-package') }}">Our Package</a></li>
+                        <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__menu column">
+                <div class="menu__title">&nbsp;</div>
+                <div class="menu " style="display:flex;">
+                    <ul id="menu-footer-menu-english-us" class="footermenulefta">
+                        <li><a href="{{ route('terms-and-conditions') }}" aria-current="page">Terms and Conditions</a></li>
+                        <li><a href="{{ route('australia') }}">Austrelia</a></li>
+                        <li><a href="{{ route('aus-to-new-zealand') }}">Austrelia to Newzeland</a></li>
+                    </ul>
+                    <ul id="menu-footer-menu-b-english-us" class="footermenuleftb">
+                        <li><a href="{{ route('new-zealand-to-bali') }}">Newzeland to Bali</a></li>
+                        {{-- <li><a href="corporate-gift.html">Corporate gifts</a></li>
+                        <li><a href="join.html">Join us</a></li> --}}
+                    </ul>
+                </div>
+            </div>
+            
+            
             <div class="footer__contact column">
                 <div class="menu__title">Member of</div>
                 <div class="member_of">
@@ -94,25 +111,15 @@
             </div>
         </div>
     </div>
-    <div class="footer__social">
-        <a target="_blank" href="#">
-            <img loading="lazy" src="{{asset('frontend_assets/img/fb-ro.svg')}}" alt="">
-        </a>
-        <a target="_blank" href="#">
-            <img loading="lazy" src="{{asset('frontend_assets/img/ln-ro.svg')}}" alt="">
-        </a>
-        <a target="_blank" href="#">
-            <img loading="lazy" src="{{asset('frontend_assets/img/ig-ro.svg')}}" alt="">
-        </a>
-    </div>
+    
     <div class="copyright">
         <div class="text">
             <span>Copyright © FM Vacation 2023</span>
             <span>All rights reserved</span>
         </div>
         <div class="pages">
-            <a href="#">Terms &amp; Conditions</a>
-            <a href="#">Privacy &amp; Cookies</a>
+            <a href="{{ route('terms-and-conditions') }}">Terms &amp; Conditions</a>
+            <a href="{{ route('privacy-policy') }}">Privacy &amp; Cookies</a>
         </div>
     </div>
 </footer>
