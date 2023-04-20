@@ -90,7 +90,7 @@
             <div class="Image MainImage"><img src="{{asset('frontend_assets/img/hotel-checkin.png')}}"></div>
         </div>
         <div class="Action">
-            <a class="Button" href="#">CREATE FMVACATION</a>
+            <a class="Button" href="{{ route('our-package') }}">BUY NOW</a>
         </div>
     </div>
 </section>

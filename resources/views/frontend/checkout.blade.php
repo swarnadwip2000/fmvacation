@@ -40,7 +40,7 @@
                                                 <div class="form-group">
                                                     <input type="text" class="form-control form-control--sm"
                                                         placeholder="Enter name" name="shipping_first_name"
-                                                        @if ($address == null) value="{{ Auth::user()->first_name }}" @else value="{{ $address['first_name'] }}" @endif
+                                                        @if ($address == null) @if(Auth::check()) value="{{ Auth::user()->first_name }}" @endif @else value="{{ $address['first_name'] }}" @endif
                                                         id="shipping_first_name">
                                                 </div>
                                             </div>
@@ -49,7 +49,7 @@
                                                 <div class="form-group">
                                                     <input type="text" class="form-control form-control--sm"
                                                         placeholder="Enter name" name="shipping_last_name"
-                                                        @if ($address == null) value="{{ Auth::user()->last_name }}" @else value="{{ $address['last_name'] }}" @endif
+                                                        @if ($address == null) @if(Auth::check()) value="{{ Auth::user()->last_name }}" @endif @else value="{{ $address['last_name'] }}" @endif
                                                         id="shipping_last_name">
                                                 </div>
                                             </div>
@@ -87,11 +87,13 @@
                                                 name="shipping_address" placeholder="Enter address" id="shipping_address"
                                                 @if ($address != null) value="{{ $address['address'] }}" @endif>
                                         </div>
+                                        @if(Auth::check() && Auth::user()->hasRole('USER'))
                                         <div class="clearfix">
                                             <input id="formcheckoutCheckbox1" name="checkbox1" type="checkbox"
                                                 @if ($address != null) checked @endif>
                                             <label for="formcheckoutCheckbox1">Save address to my account</label>
                                         </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +111,7 @@
                                                 <div class="form-group">
                                                     <input type="text" class="form-control form-control--sm"
                                                         placeholder="Enter name" name="billing_first_name"
-                                                        @if ($address == null) value="{{ Auth::user()->name }}" @else value="{{ $address['billing_first_name'] }}" @endif
+                                                        
                                                         id="billing_first_name">
                                                 </div>
                                             </div>
@@ -118,7 +120,7 @@
                                                 <div class="form-group">
                                                     <input type="text" class="form-control form-control--sm"
                                                         placeholder="Enter name" name="billing_last_name"
-                                                        @if ($address == null) value="{{ Auth::user()->last_name }}" @else value="{{ $address['billing_last_name'] }}" @endif
+                                                        
                                                         id="billing_last_name">
                                                 </div>
                                             </div>
@@ -155,12 +157,33 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                                </div>
-
                         </div>
 
                         <div class="row justify-content-center">
+                            @if(Auth::check() && Auth::user()->hasRole('USER'))
+                            @else
+                            <div class="col-md-6 mt-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h2>Register</h2>
+                                        <div class="row mt-4">
+                                            <div class="col-sm-6">
+                                                <label>Email:</label>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control form-control--sm" placeholder="Enter email"  name="email" id="email">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label>Password</label>
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control form-control--sm" placeholder="Password" name="password" id="password">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
                             <div class="col-md-6 mt-4">
                                 <div class="card">
                                     <div class="card-body">
@@ -175,6 +198,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </form>
@@ -313,7 +337,8 @@
 
         });
     </script> --}}
-    <script>
+     @if(Auth::check() && Auth::user()->hasRole('USER'))
+     <script>
         $('.require-validation').validate({
             rules: {
                 'shipping_first_name': {
@@ -444,6 +469,147 @@
             }
         });
     </script>
+     @else
+    <script>
+        $('.require-validation').validate({
+            rules: {
+                'email': {
+                    required: true,
+                    email: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 8
+                },
+                'shipping_first_name': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 50
+                },
+                'shipping_last_name': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 50
+                },
+                
+                'shipping_address': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 100
+                },
+                'shipping_zipcode': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 10
+                },
+                'shipping_state': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 50
+                },
+                'shipping_country': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 50
+                },
+                'billing_first_name': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 50
+                },
+                'billing_last_name': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 50
+                },
+
+                'billing_address': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 100
+                },
+                'billing_zipcode': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 10
+                },
+                'billing_state': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 50
+                },
+                'billing_country': {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 50
+                },
+            },
+
+
+            messages: {
+
+                shipping_first_name: {
+                    required: "Please enter your first name",
+                    minlength: "Please enter a valid first name",
+                    maxlength: "Please enter a valid first name"
+                },
+                shipping_last_name: {
+                    required: "Please enter your last name",
+                    minlength: "Please enter a valid last name",
+                    maxlength: "Please enter a valid last name"
+                },
+                shipping_phone: {
+                    required: "Please enter your phone number",
+                    minlength: "Please enter a valid phone number",
+                    maxlength: "Please enter a valid phone number"
+                },
+                shipping_address: {
+                    required: "Please enter your shipping address",
+                    minlength: "Please enter a valid shipping address",
+                    maxlength: "Please enter a valid shipping address"
+                },
+                shipping_zipcode: {
+                    required: "Please enter your shipping zipcode",
+                    minlength: "Please enter a valid shipping zipcode",
+                    maxlength: "Please enter a valid shipping zipcode"
+                },
+                shipping_state: {
+                    required: "Please enter your shipping state",
+                    minlength: "Please enter a valid shipping state",
+                    maxlength: "Please enter a valid shipping state"
+                },
+                shipping_country: {
+                    required: "Please enter your shipping country",
+                    minlength: "Please enter a valid shipping country",
+                    maxlength: "Please enter a valid shipping country"
+                },
+
+                billing_address: {
+                    required: "Please enter your billing address",
+                    minlength: "Please enter a valid billing address",
+                    maxlength: "Please enter a valid billing address"
+                },
+                billing_zipcode: {
+                    required: "Please enter your billing zipcode",
+                    minlength: "Please enter a valid billing zipcode",
+                    maxlength: "Please enter a valid billing zipcode"
+                },
+                billing_state: {
+                    required: "Please enter your billing state",
+                    minlength: "Please enter a valid billing state",
+                    maxlength: "Please enter a valid billing state"
+                },
+                billing_country: {
+                    required: "Please enter your billing country",
+                    minlength: "Please enter a valid billing country",
+                    maxlength: "Please enter a valid billing country"
+                },
+
+
+            }
+        });
+    </script>
+    @endif
     {{-- <script>
         $('#card-number').on('input propertychange paste', function() {
             var value = $('#card-number').val();

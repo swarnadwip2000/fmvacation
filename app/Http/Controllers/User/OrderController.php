@@ -9,8 +9,10 @@ use App\Models\DeliverAddress;
 use App\Models\Order;
 use App\Models\Package;
 use App\Models\Payment;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Stripe;
@@ -29,11 +31,22 @@ class OrderController extends Controller
 
     public function checkout()
     {
-        $package = Cart::where('user_id', Auth::user()->id)->first();
-        $count = DeliverAddress::where('user_id', Auth::user()->id)->count();
-        if ($count > 0) {
-            $address = DeliverAddress::where('user_id', Auth::user()->id)->first();
+        if (Auth::check() && Auth::user()->hasRole('USER')) {
+            $package = Cart::where('user_id', Auth::user()->id)->first();
+            if($package == null){
+                return redirect()->back()->with('error', 'Your cart is empty');
+            }
+            $count = DeliverAddress::where('user_id', Auth::user()->id)->count();
+            if ($count > 0) {
+                $address = DeliverAddress::where('user_id', Auth::user()->id)->first();
+            } else {
+                $address = null;
+            }
         } else {
+            $package = Cart::where('session_id', Session::get('session_id'))->first();
+            if($package == null){
+                return redirect()->back()->with('error', 'Your cart is empty');
+            }
             $address = null;
         }
         return view('frontend.checkout')->with(compact('package', 'address'));
@@ -120,7 +133,7 @@ class OrderController extends Controller
                 'returnUrl' => route('payment.success'),
                 'cancelUrl' => route('payment.cancel'),
             ])->send();
-            
+
             if ($response->isRedirect()) {
                 Session::put('package_id', $request->package_id);
                 Session::put('billing_first_name', $request->billing_first_name);
@@ -129,6 +142,14 @@ class OrderController extends Controller
                 Session::put('billing_state', $request->billing_state);
                 Session::put('billing_country', $request->billing_country);
                 Session::put('billing_zipcode', $request->billing_zipcode);
+                Session::put('shipping_first_name', $request->shipping_first_name);
+                Session::put('shipping_last_name', $request->shipping_last_name);
+                Session::put('shipping_address', $request->shipping_address);
+                Session::put('shipping_state', $request->shipping_state);
+                Session::put('shipping_country', $request->shipping_country);
+                Session::put('shipping_zipcode', $request->shipping_zipcode);
+                Session::put('email', $request->email);
+                Session::put('password', $request->password);
 
                 $response->redirect();
             } else {
@@ -141,6 +162,7 @@ class OrderController extends Controller
 
     public function success(Request $request)
     {
+        // return Session::all();
         if ($request->input('paymentId') && $request->input('PayerID')) {
             $transaction = $this->gateway->completePurchase([
                 'payer_id' => $request->input('PayerID'),
@@ -150,8 +172,37 @@ class OrderController extends Controller
             $response = $transaction->send();
             if ($response->isSuccessful()) {
                 $arr = $response->getData();
-                $package = Package::where('id', Session::get('package_id'))->first();
+                  $package = Package::where('id', Session::get('package_id'))->first();
                 $order_number = uniqid('FM-');
+                if (!Auth::check()) {
+                    $newUser = new User();
+                    $newUser->first_name = Session::get('shipping_first_name');
+                    $newUser->last_name = Session::get('shipping_last_name');
+                    $newUser->email = Session::get('email');
+                    $newUser->password = Hash::make(Session::get('password'));
+                    $newUser->status = true;
+                    $newUser->save();
+                    $newUser->assignRole('USER');
+                    // $credentials = $request->only('email', 'password');
+                    Auth::login($newUser);
+                    // Session::put('user', $newUser);
+                    Cart::where('session_id', Session::get('session_id'))->update(['user_id' => $newUser->id]);
+                } else if (Auth::check() && (!Auth::user()->hasRole('USER'))) {
+                    $newUser = new User();
+                    $newUser->first_name = Session::get('shipping_first_name');
+                    $newUser->last_name = Session::get('shipping_last_name');
+                    $newUser->email = Session::get('email');
+                    $newUser->password = Hash::make(Session::get('password'));
+                    $newUser->status = true;
+                    $newUser->save();
+                    $newUser->assignRole('USER');
+                    // $credentials = $request->only('email', 'password');
+                    Auth::login($newUser);
+                    // Session::put('user', $newUser);
+                    Cart::where('session_id', Session::get('session_id'))->update(['user_id' => $newUser->id]);
+                }
+                
+                
 
                 $cart = Cart::where('user_id', Auth::user()->id)->first();
                 $deliverAddress = DeliverAddress::where('user_id', Auth::user()->id)->first();
@@ -165,12 +216,12 @@ class OrderController extends Controller
                 $order->send_from = $cart->send_from;
                 $order->send_message = $cart->send_message;
                 $order->delivery_method = $cart->delivery_method;
-                $order->shipping_first_name = $deliverAddress->first_name;
-                $order->shipping_last_name = $deliverAddress->last_name;
-                $order->shipping_address = $deliverAddress->address;
-                $order->shipping_state = $deliverAddress->state;
-                $order->shipping_country = $deliverAddress->country;
-                $order->shipping_zipcode = $deliverAddress->zipcode;
+                $order->shipping_first_name = Session::get('shipping_first_name');
+                $order->shipping_last_name = Session::get('shipping_last_name');
+                $order->shipping_address = Session::get('shipping_address');
+                $order->shipping_state = Session::get('shipping_state');
+                $order->shipping_country = Session::get('shipping_country');
+                $order->shipping_zipcode = Session::get('shipping_zipcode');
                 $order->billing_first_name = Session::get('billing_first_name');
                 $order->billing_last_name = Session::get('billing_last_name');
                 $order->billing_state = Session::get('billing_state');
@@ -204,7 +255,18 @@ class OrderController extends Controller
                 Session::forget('billing_state');
                 Session::forget('billing_country');
                 Session::forget('billing_zipcode');
+                Session::forget('shipping_first_name');
+                Session::forget('shipping_last_name');
+                Session::forget('shipping_address');
+                Session::forget('shipping_state');
+                Session::forget('shipping_country');
+                Session::forget('shipping_zipcode');
+
+                Session::forget('email');
+                Session::forget('password');
+
                 
+
                 return redirect()->route('orders')->with('message', 'Order has been placed successfully');
             } else {
                 return redirect()->back()->with('error', $response->getMessage());

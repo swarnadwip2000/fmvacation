@@ -57,13 +57,10 @@
                                         <p id="total">${{ $packageCart['package']['package_price'] }}</p>
                                     </div>
                                 </div>
-                                @if (Auth::check() && Auth::user()->hasRole('USER'))
+                                
                                     <a href="{{ route('checkout') }}"><button id="btn-checkout"
                                             class="shopnow"><span>Checkout</span></button></a>
-                                @else
-                                    <a href="{{ route('login') }}"><button id="btn-checkout"
-                                            class="shopnow"><span>Checkout</span></button></a>
-                                @endif
+                               
                             </div>
                         </div>
                     </div>

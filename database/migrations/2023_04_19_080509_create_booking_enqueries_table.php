@@ -19,11 +19,12 @@ class CreateBookingEnqueriesTable extends Migration
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->string('booking_date')->nullable();
             $table->string('booking_from')->nullable();
             $table->string('booking_to')->nullable();
             $table->string('adults')->nullable();
             $table->string('location')->nullable();
+            $table->string('voucher_code')->nullable();
+            $table->enum('status',['Process','Accept','Hold','Cancelled'])->default('Process');
             $table->timestamps();
         });
     }

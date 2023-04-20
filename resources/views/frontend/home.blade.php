@@ -5,6 +5,11 @@
     {{ env('APP_NAME') }} | HOME
 @endsection
 @push('styles')
+<style>
+    .error {
+        color: red;
+    }
+</style>
 @endpush
 
 
@@ -255,31 +260,23 @@
                                 <img loading="lazy" src="{{ asset('frontend_assets/img/mirror-logo.png') }}">
                             </div>
                             <div class="Text">
-                                "Know someone is planning a trip but they’re keeping an eye out for flights?
-                                Give them the option to find the best deal for them with this handy gift card,
-                                which claims to be the world’s only cross-airline gift card. That means over 980
-                                destinations on offer around the world, with access to hundreds of airlines. No
-                                need to risk booking flights they can’t use!" </div>
+                                "If you're someone who loves to travel, then you definitely need to check out FM Vacation. I recently used their vouchers and I have to say, I was blown away by the discounts and the quality of the deals offered.
+                                The selection of destinations is vast and covers a wide range of interests. Whether you're looking for a relaxing beach vacation, an adventure-filled trip to the mountains, or a cultural experience in a foreign country, you're sure to find a deal that suits your needs." </div>
                         </div>
                         <div class="Media">
                             <div class="Logo">
                                 <img loading="lazy" src="{{ asset('frontend_assets/img/mirror-logo.png') }}">
                             </div>
                             <div class="Text">
-                                "If you think gift cards are an impersonal gift, think again. It works just like
-                                a gift card, but besides its impressive presentation (the Flightgift looks like
-                                a plane ticket), purchasers can choose from a customizable digital card to a
-                                handwritten message or to even a video greeting along with the e-card." </div>
+                                "The booking process was also very easy and straightforward. All I had to do was select my destination, choose my travel dates, select your hotel & redeem your hotel gift card. The website provided all the necessary information about the booking process, including payment options and cancellation policies. I highly recommend FM Vacation to anyone who is planning a trip and looking for great hotels. With a wide selection of hotels and significant offers, it's definitely worth checking out." </div>
                         </div>
                         <div class="Media">
                             <div class="Logo">
                                 <img loading="lazy" src="{{ asset('frontend_assets/img/mirror-logo.png') }}">
                             </div>
                             <div class="Text">
-                                "Even people who don't travel much sometimes need a place to stay. House
-                                renovations? Date night? Someone they want to visit? With nothing more than your
-                                phone, five minutes, and a credit card, you can give these things. Again, you
-                                pick the dollar amount, they choose from 550,000 hotels in 170 countries."
+                                "One of the things I loved about the FM Vacation gift card was the flexibility it offered. With the gift card, I was able to choose from a wide range of hotels in different destinations and book my stay for free. This allowed me to plan my trip without having to worry about the cost of accommodation, which was a huge relief.
+                                But what really impressed me about this gift card was the quality of the hotels on offer. Despite being able to book my stay for free, I was still able to choose from a wide range of hotels, from budget-friendly options to luxurious resorts. This meant that I could still enjoy a comfortable and enjoyable stay without having to pay a cent."
                             </div>
                         </div>
                         <div class="Media">
@@ -287,10 +284,9 @@
                                 <img loading="lazy" src="{{ asset('frontend_assets/img/mirror-logo.png') }}">
                             </div>
                             <div class="Text">
-                                "Even people who don't travel much sometimes need a place to stay. House
-                                renovations? Date night? Someone they want to visit? With nothing more than your
-                                phone, five minutes, and a credit card, you can give these things. Again, you
-                                pick the dollar amount, they choose from 550,000 hotels in 170 countries."
+                                "If you're looking for a unique and thoughtful gift for a couple celebrating their second honeymoon, then the FM Vacation gift card is an excellent choice. I recently gifted this travel gift card to a friend who was celebrating their second honeymoon, and they were thrilled with the gift.
+
+                                The gift card allowed them to plan and book their second honeymoon without having to worry about the cost of accommodation or flights. This made the planning process much more manageable, and they were able to focus on choosing the perfect destination and activities to make their second honeymoon truly special."
                             </div>
                         </div>
                     </div>
@@ -298,8 +294,172 @@
             </div>
         </div>
     </section>
+    <!-- Modal -->
+<div class="modal fade" id="hotel_book_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content modal_bg_l">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Book Hotel</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="">
+              <form method="post" class="create-form" action="{{ route('book.hotel') }}">
+                  @csrf
+                  <div class="row">
+                      <div class="form-group col-md-6">
+                          <label for="">Name:</label>
+                          <input type="text" class="form-control" name="name" id="name" aria-describedby="" placeholder="">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="">Email:</label>
+                          <input type="email" class="form-control" name="email" id="email" aria-describedby="" placeholder="">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="">Phone Number:</label>
+                          <input type="texty" class="form-control" name="phone" id="phone" aria-describedby="" placeholder="">
+                      </div>
+                     
+                      <div class="form-group col-md-6">
+                          <label for="">Booking From:</label>
+                          <input type="date" class="form-control" name="booking_from" id="booking_from" aria-describedby="" placeholder="" min="{{date('Y-m-d')}}">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="">Booking to:</label>
+                          <input type="date" class="form-control" name="booking_to" id="booking_to" aria-describedby="" placeholder="" min="{{date('Y-m-d')}}">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="">Adults:</label>
+                          <input type="text" class="form-control" name="adults_number" id="" aria-describedby="" placeholder="">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="">Location:</label>
+                          <input type="text" class="form-control" name="location" id="location" aria-describedby="" placeholder="">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="">You have any voucher code?</label>
+                          <div class="d-flex">
+                              <div class="form-check pr-4">
+                                <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="yes">
+                                <label class="form-check-label" for="exampleRadios1">
+                                  Yes
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="no" checked>
+                                <label class="form-check-label" for="exampleRadios2">
+                                  No
+                                </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group col-md-6" >
+                          <div id="vocher">
+                              <label for="">Voucher Code :</label>
+                          <input type="text" class="form-control" name="voucher_code" id="voucher_code" aria-describedby="" placeholder="">
+                          </div>
+                      </div>
+                     
+                      
+                      
+                      
+                      
+                      
+                      <div class="form-group col-md-6">
+                          <button type="submit" class="btn btn-block btn-warning">Submit</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
     <div loading="lazy" class="top__footer"></div>
 @endsection
 
 @push('scripts')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#vocher').hide();
+        $('input[type="radio"]').click(function() {
+            if($(this).attr('id') == 'exampleRadios1') {
+                $('#voucher_code').attr('required', '');
+                $('#vocher').show();
+            } else {
+                $('#voucher_code').removeAttr('required');
+                $('#vocher').hide();
+            }
+        });
+    });
+</script>
+<script>
+    $('.create-form').validate({
+        rules: {
+            'name': {
+                required: true,
+            },
+            'email': {
+                required: true,
+                email: true,
+            },
+            'phone': {
+                required: true,
+                number: true,
+            },
+            'booking_date': {
+                required: true,
+            },
+            'booking_from': {
+                required: true,
+            },
+            'booking_to': {
+                required: true,
+            },
+            'adults_number': {
+                required: true,
+                number: true,
+            },
+            'location': {
+                required: true,
+            },
+        },
+
+        messages: {
+            'name': {
+                required: 'Please enter your name',
+            },
+            'email': {
+                required: 'Please enter your email',
+                email: 'Please enter a valid email',
+            },
+            'phone': {
+                required: 'Please enter your phone number',
+                number: 'Please enter a valid phone number',
+            },
+            'booking_date': {
+                required: 'Please enter your booking date',
+            },
+            'booking_from': {
+                required: 'Please enter your booking from',
+            },
+            'booking_to': {
+                required: 'Please enter your booking to',
+            },
+            'adults_number': {
+                required: 'Please enter your adults number',
+                number: 'Please enter a valid adults number',
+            },
+            'location': {
+                required: 'Please enter your location',
+            },
+        },
+
+    });
+</script>
 @endpush

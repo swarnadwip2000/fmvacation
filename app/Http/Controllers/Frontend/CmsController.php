@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Newsletter;
 use App\Models\Package;
 use Illuminate\Http\Request;
 
@@ -61,5 +62,14 @@ class CmsController extends Controller
         return view('frontend.new-zealand-to-bali');
     }
 
+    // newsletter ajax submit
+    public function newsletter(Request $request)
+    {
+      
+        $newsletter = new Newsletter();
+        $newsletter->email = $request->email;
+        $newsletter->save();
 
+        return response()->json(['success' => 'Newsletter added successfully.']);
+    }
 }

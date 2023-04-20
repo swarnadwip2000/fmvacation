@@ -54,9 +54,9 @@
     <script src="{{ asset('frontend_assets/js/Header.js') }}" id="header-js-js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer="" async="async" src="{{ asset('frontend_assets/js/Footer.js') }}" id="script-js"></script>
+    <script src="{{ asset('frontend_assets/js/Homepage.js') }}" id="homepage-js-js"></script>
 
-
-
+    
     <script type="application/javascript">
         $('.multiple-items').slick({
             infinite: true,
@@ -150,6 +150,33 @@
             }
             toastr.warning("{{ session('warning') }}");
         @endif
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#submit-newsletter").submit(function () {
+                var email = $("#email-newsletter").val();
+                // alert(email);   
+                if (email == "") {
+                    alert("Please enter email address");
+                    return false;
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "{{ route('newsletter') }}",
+                    data: {
+                        email: email,
+                        _token: "{{ csrf_token() }}"
+                    },
+                    success: function (data) {
+                        // console.log(data.success);
+                        if (data.success != '') {
+                           toastr.success(data.success);
+                            $("#email").val("");
+                    }
+                }
+                });
+            });
+        });
     </script>
     @stack('scripts')
 </body>

@@ -2064,6 +2064,8 @@ span.step_count {
     color: #222222;
     font-weight: 700;
     color: #0c0026;
+    text-align: center;
+    line-height: inherit;
   }
   
   
@@ -2226,6 +2228,11 @@ span.step_count {
     }
     span.step_count, .step2 .step_count, .step3 .step_count{
         left: 0;
+    }
+}
+@media(max-width:767px) {
+    .BrandLogos img {
+        border-radius: 10px;
     }
 }
 

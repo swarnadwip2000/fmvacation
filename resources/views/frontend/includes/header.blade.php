@@ -131,8 +131,8 @@
                 <p class="MobileHeaderFrontImage">
                     <img alt="fmvacation" src="{{ asset('frontend_assets/img/HG-physical_en.png') }}">
                 </p>
-                <p class="Buttons"><a class="ButtonGive" href="#">GIVE fmvacation</a> <a class="ButtonRedeem"
-                        href="#">REDEEM</a>
+                <p class="Buttons"><a class="ButtonGive" href="{{ route('how-it-works') }}">GIVE fmvacation</a> <a class="ButtonRedeem"
+                        href="#" data-toggle="modal" data-target="#hotel_book_modal">REDEEM</a>
                 </p>
             </div>
         </div>

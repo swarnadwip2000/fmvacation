@@ -42,7 +42,7 @@
    
     <div class="footer__widgets">
         <div class="widgets__row">
-            <div class="footer__contact column pr-3">
+            <div class="footer__contact column pr-5">
                 <div class="menu_logo">
                     <a href=""><img loading="lazy" src="{{asset('frontend_assets/img/logo_white.png')}}" alt="experiencegift-box"></a>
                 </div>
@@ -72,33 +72,31 @@
             <div class="footer__menu column">
                 <div class="menu__title">
                     FM Vacation </div>
-                <div class="menu " style="display:flex;">
+                <div class="menu">
                     <ul id="menu-footer-menu-english-us" class="footermenulefta">
                         <li><a href="{{ route('home') }}" aria-current="page">Home</a></li>
                         <li><a href="{{ route('our-hotels') }};">Our Hotels</a></li>   
                         <li><a href="{{ route('about-us') }}">About us</a></li>
-                    </ul>
-                    <ul id="menu-footer-menu-b-english-us" class="footermenuleftb">
                         <li><a href="{{ route('how-it-works') }}">How it works</a></li>
                         <li><a href="{{ route('our-package') }}">Our Package</a></li>
-                        <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__menu column">
-                <div class="menu__title">&nbsp;</div>
-                <div class="menu " style="display:flex;">
+                <div class="menu__title">Support</div>
+                <div class="menu">
                     <ul id="menu-footer-menu-english-us" class="footermenulefta">
+                        <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
                         <li><a href="{{ route('terms-and-conditions') }}" aria-current="page">Terms and Conditions</a></li>
                         <li><a href="{{ route('australia') }}">Austrelia</a></li>
                         <li><a href="{{ route('aus-to-new-zealand') }}">Austrelia to Newzeland</a></li>
                         <li><a href="{{ route('new-zealand-to-bali') }}">Newzeland to Bali</a></li>
                     </ul>
-                    <ul id="menu-footer-menu-b-english-us" class="footermenuleftb">
+                    <!--<ul id="menu-footer-menu-b-english-us" class="footermenuleftb">-->
                         
-                        {{-- <li><a href="corporate-gift.html">Corporate gifts</a></li>
-                        <li><a href="join.html">Join us</a></li> --}}
-                    </ul>
+                    <!--    {{-- <li><a href="corporate-gift.html">Corporate gifts</a></li>-->
+                    <!--    <li><a href="join.html">Join us</a></li> --}}-->
+                    <!--</ul>-->
                 </div>
             </div>
             
@@ -107,7 +105,7 @@
                 <div class="menu__title">Member of</div>
                 <div class="member_of">
                     <img loading="lazy" src="{{asset('frontend_assets/img/iata-white.png')}}" alt="IATA">
-                    <img loading="lazy" src="{{asset('frontend_assets/img/dutch_assoc.png')}}" alt="Dutch Gift Card Association">
+                    <!--<img loading="lazy" src="{{asset('frontend_assets/img/dutch_assoc.png')}}" alt="Dutch Gift Card Association">-->
                 </div>
             </div>
         </div>
@@ -118,9 +116,9 @@
             <span>Copyright © FM Vacation 2023</span>
             <span>All rights reserved</span>
         </div>
-        <div class="pages">
-            <a href="{{ route('terms-and-conditions') }}">Terms &amp; Conditions</a>
-            <a href="{{ route('privacy-policy') }}">Privacy &amp; Cookies</a>
-        </div>
+        <!--<div class="pages">-->
+        <!--    <a href="{{ route('terms-and-conditions') }}">Terms &amp; Conditions</a>-->
+        <!--    <a href="{{ route('privacy-policy') }}">Privacy &amp; Cookies</a>-->
+        <!--</div>-->
     </div>
 </footer>

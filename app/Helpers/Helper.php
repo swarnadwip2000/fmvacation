@@ -45,4 +45,10 @@ class Helper
             return $count;
         }
     }
+
+    public static function getOrder($vocher_code)
+    {
+        $order = Order::where('voucher_code', $vocher_code)->first();
+        return $order;
+    }
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\EnqueryConrtoller;
+use App\Http\Controllers\Admin\NewsletterController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\Frontend\BookController;
@@ -84,6 +85,16 @@ Route::group(['middleware' => ['admin'], 'prefix' => 'admin'], function () {
     Route::prefix('enquiry')->name('enquiry.')->group(function () {
         Route::get('/', [EnqueryConrtoller::class, 'enquiry'])->name('index');
     });
+
+    // call back
+    Route::prefix('callback')->name('callback.')->group(function () {
+        Route::get('/', [EnqueryConrtoller::class, 'callback'])->name('index');
+        Route::post('/status', [EnqueryConrtoller::class, 'status'])->name('status');
+    });
+
+    Route::prefix('newsletter')->name('newsletter.')->group(function () {
+        Route::get('/', [NewsletterController::class, 'newsletter'])->name('index');
+    });
     
 });
 
@@ -112,6 +123,8 @@ Route::get('australia', [CmsController::class, 'australia'])->name('australia');
 Route::get('aus-to-new-zealand', [CmsController::class, 'ausToNewZealand'])->name('aus-to-new-zealand');
 // New Zealand
 Route::get('new-zealand-to-bali', [CmsController::class, 'newZealandToBali'])->name('new-zealand-to-bali');
+// newsletter
+Route::post('newsletter', [CmsController::class, 'newsletter'])->name('newsletter');
 
 // Bali
 Route::get('bali', [CmsController::class, 'bali'])->name('bali');
@@ -126,15 +139,17 @@ Route::post('add-to-cart', [CartController::class, 'addToCart'])->name('add-to-c
 Route::post('remove-cart', [CartController::class, 'cartRemove'])->name('frontend.cart.remove');
 Route::post('book-hotel', [BookController::class, 'bookHotel'])->name('book.hotel');
 
-Route::middleware('user')->group(function () {
-    Route::get('checkout', [OrderController::class, 'checkout'])->name('checkout');
-    Route::post('checkout-store', [OrderController::class, 'checkoutStore'])->name('checkout.store');
-    // success payment
-    Route::get('success', [OrderController::class, 'success'])->name('payment.success');
-    // cancel payment
-    Route::get('cancel', [OrderController::class, 'cancel'])->name('payment.cancel');
+Route::get('checkout', [OrderController::class, 'checkout'])->name('checkout');
+Route::post('checkout-store', [OrderController::class, 'checkoutStore'])->name('checkout.store');
+// success payment
+Route::get('success', [OrderController::class, 'success'])->name('payment.success');
+// cancel payment
+Route::get('cancel', [OrderController::class, 'cancel'])->name('payment.cancel');
 
-    Route::post('save-address', [OrderController::class, 'saveAddress'])->name('save.address');
+Route::post('save-address', [OrderController::class, 'saveAddress'])->name('save.address');
+
+Route::middleware('user')->group(function () {
+   
     // hold order profilecontroller
     Route::get('hold-order', [UserProfileController::class, 'holdOrder'])->name('hold.order');
     // order details

@@ -43,7 +43,13 @@
                     <span>Others</span>
                 </li>
                 <li class="{{ Request::is('admin/enquiry*')  ? 'active' : ' ' }}">
-                    <a href="{{ route('enquiry.index') }}" ><i class="fa fa-question"></i>  <span> Hotel Enquiries</span><span></span></a>                 
+                    <a href="{{ route('enquiry.index') }}" ><i class="la la-question"></i>  <span> Hotel Enquiries</span><span></span></a>                 
+                </li>
+                <li class="{{ Request::is('admin/callback*')  ? 'active' : ' ' }}">
+                    <a href="{{ route('callback.index') }}" ><i class="la la-reply"></i>  <span> Callback</span><span></span></a>                 
+                </li>
+                <li class="{{ Request::is('admin/newsletter*')  ? 'active' : ' ' }}">
+                    <a href="{{ route('newsletter.index') }}" ><i class="la la-envelope"></i>  <span> Newsletter</span><span></span></a>                 
                 </li>
             </ul> 
         </div>
