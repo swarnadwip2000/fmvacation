@@ -92,9 +92,10 @@
                         <li><a href="{{ route('terms-and-conditions') }}" aria-current="page">Terms and Conditions</a></li>
                         <li><a href="{{ route('australia') }}">Austrelia</a></li>
                         <li><a href="{{ route('aus-to-new-zealand') }}">Austrelia to Newzeland</a></li>
+                        <li><a href="{{ route('new-zealand-to-bali') }}">Newzeland to Bali</a></li>
                     </ul>
                     <ul id="menu-footer-menu-b-english-us" class="footermenuleftb">
-                        <li><a href="{{ route('new-zealand-to-bali') }}">Newzeland to Bali</a></li>
+                        
                         {{-- <li><a href="corporate-gift.html">Corporate gifts</a></li>
                         <li><a href="join.html">Join us</a></li> --}}
                     </ul>

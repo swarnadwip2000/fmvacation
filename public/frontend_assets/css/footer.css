@@ -692,12 +692,9 @@ span.email_icon {
 }
 
 .footer__social {
-    text-align: center;
-    background: var(--dark_blue);
-    width: 180px;
-    margin: -18px auto;
+    margin: 18px 0 0;
     z-index: 1000;
-    position: relative
+    position: relative;
 }
 
 .footer__social a {

@@ -2788,7 +2788,11 @@ span.step_count {
 .bg_color_avbb ul{
     padding-left: 25px;
 }
-
+.menu_logo a img{
+    width:100%;
+    padding-right:15px;
+    margin-bottom:15px;
+}
 
 
 

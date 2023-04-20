@@ -187,7 +187,7 @@
             </div>
         </div>
     </section>
-    <section class="Section3">
+    <section class="Section3" style="padding:0; margin:0;">
         
         <div class="Title">Made to spread happiness</div>
         <div class="FactsDesktop">
