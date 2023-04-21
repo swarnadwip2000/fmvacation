@@ -1,11 +1,14 @@
 @extends('admin.layouts.master')
 @section('title')
-    Dashboard - {{env('APP_NAME')}} admin
+    Dashboard - {{ env('APP_NAME') }} admin
 @endsection
 @push('styles')
 @endpush
 
 @section('content')
+    @php
+        use App\Helpers\Helper;
+    @endphp
     <div class="page-wrapper">
 
         <div class="content container-fluid">
@@ -24,41 +27,41 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
                     <a href="{{ route('orders.hold') }}" style="color: black">
-                    <div class="card dash-widget">
-                        <div class="card-body">
-                            <span class="dash-widget-icon"><i class="la la-shopping-bag"></i></span>
-                            <div class="dash-widget-info">
-                                <h3>{{ $count['hold_order'] }}</h3>
-                                <span>Total Hold Order</span>
+                        <div class="card dash-widget">
+                            <div class="card-body">
+                                <span class="dash-widget-icon"><i class="la la-shopping-bag"></i></span>
+                                <div class="dash-widget-info">
+                                    <h3>{{ $count['hold_order'] }}</h3>
+                                    <span>Total hold order</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
                     <a href="{{ route('orders.index') }}" style="color: black">
-                    <div class="card dash-widget">
-                        <div class="card-body">
-                            <span class="dash-widget-icon"><i class="la la-shopping-cart"></i></span>
-                            <div class="dash-widget-info">
-                                <h3>{{ $count['order'] }}</h3>
-                                <span>Total Order</span>
+                        <div class="card dash-widget">
+                            <div class="card-body">
+                                <span class="dash-widget-icon"><i class="la la-shopping-cart"></i></span>
+                                <div class="dash-widget-info">
+                                    <h3>{{ $count['order'] }}</h3>
+                                    <span>Total order</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                    <a href="" style="color: black">
-                    <div class="card dash-widget">
-                        <div class="card-body">
-                            <span class="dash-widget-icon"><i class="la la-shopping-cart"></i></span>
-                            <div class="dash-widget-info">
-                                <h3>{{ $count['order_this_month'] }}</h3>
-                                <span>Total Order This Month</span>
+                    <a href="#" style="color: black">
+                        <div class="card dash-widget">
+                            <div class="card-body">
+                                <span class="dash-widget-icon"><i class="la la-shopping-cart"></i></span>
+                                <div class="dash-widget-info">
+                                    <h3>{{ $count['order_this_month'] }}</h3>
+                                    <span>Total order this month</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
@@ -68,7 +71,7 @@
                                 <span class="dash-widget-icon"><i class="fa fa-user"></i></span>
                                 <div class="dash-widget-info">
                                     <h3>{{ $count['user'] }}</h3>
-                                    <span>Total User</span>
+                                    <span>Total user</span>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +83,7 @@
                             <div class="card-body">
                                 <span class="dash-widget-icon"><i class="la la-reply"></i></span>
                                 <div class="dash-widget-info">
-                                    <h3>{{ $count['user'] }}</h3>
+                                    <h3>{{ $count['call_back'] }}</h3>
                                     <span>Total call back </span>
                                 </div>
                             </div>
@@ -88,12 +91,12 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                    <a href="{{ route('customers.index') }}" style="color: black">
+                    <a href="{{ route('newsletter') }}" style="color: black">
                         <div class="card dash-widget">
                             <div class="card-body">
                                 <span class="dash-widget-icon"><i class="la la-envelope"></i></span>
                                 <div class="dash-widget-info">
-                                    <h3>{{ $count['user'] }}</h3>
+                                    <h3>{{ $count['newsletter'] }}</h3>
                                     <span>Total newsletter</span>
                                 </div>
                             </div>
@@ -105,10 +108,70 @@
                         <div class="card-body">
                             <div class="card-title">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <h4 class="mb-0">Total call back</h4>
+
                                     </div>
                                 </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table id="myTable" class="dd table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Package Type</th>
+                                            <th>Package Validity</th>
+                                            <th>Package Price</th>
+                                            <th> Name</th>
+                                            <th> Email</th>
+                                            <th> Phone</th>
+                                            <th>Booking Date</th>
+                                            <th> Booking From</th>
+                                            <th>Booking To</th>
+                                            <th>How many adults?</th>
+                                            <th>Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($callbacks as $key => $callback)
+                                            <tr>
+                                                <td>
+                                                    {{ Helper::getOrder($callback->voucher_code)->package->package_name }}
+                                                </td>
+                                                <td>
+                                                    {{ Helper::getOrder($callback->voucher_code)->package->package_validity }}
+                                                </td>
+                                                <td>
+                                                    {{ Helper::getOrder($callback->voucher_code)->package->package_price }}
+                                                </td>
+                                                <td>
+                                                    {{ $callback->name }}
+                                                </td>
+                                                <td>
+                                                    {{ $callback->email }}
+                                                </td>
+                                                <td>
+                                                    {{ $callback->phone }}
+                                                </td>
+                                                <td>
+                                                    {{ date('d M,Y', strtotime($callback->booking_date)) }}
+                                                </td>
+                                                <td>
+                                                    {{ date('d M,Y', strtotime($callback->booking_from)) }}
+                                                </td>
+                                                <td>
+                                                    {{ date('d M,Y', strtotime($callback->booking_to)) }}
+                                                </td>
+                                                <td>
+                                                    {{ $callback->adults }}
+                                                </td>
+                                                <td>
+                                                    {{ $callback->location }}
+                                                </td>
+
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -263,4 +326,22 @@
 @endsection
 
 @push('scripts')
+    <script>
+        $(document).ready(function() {
+            //Default data table
+            $('#myTable').DataTable({
+                "aaSorting": [],
+                "columnDefs": [{
+                        "orderable": false,
+                        "targets": []
+                    },
+                    {
+                        "orderable": true,
+                        "targets": [0, 1, 2, 3, 4]
+                    }
+                ]
+            });
+
+        });
+    </script>
 @endpush
