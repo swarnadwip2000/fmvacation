@@ -7,11 +7,11 @@
                 <span class="subtitle">Newsletter</span>
             </div>
             <div class="mc_embed_signup">
-                <form action="" method="get">
+                <form action="javascript:void(0);" id="submit-newsletter">
                     <div class="mc_embed_signup_scroll">
                         <div class="mc-field-group">
                             <img loading="lazy" class="MailIcon" src="{{asset('frontend_assets/img/email.svg')}}">
-                            <input type="email" value="" name="EMAIL" class="required email mce-EMAIL"
+                            <input type="email" id="email-newsletter" value="" name="EMAIL" class="required email mce-EMAIL"
                                 placeholder="email address">
                         </div>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -42,7 +42,7 @@
    
     <div class="footer__widgets">
         <div class="widgets__row">
-            <div class="footer__contact column pr-5">
+            <div class="footer__contact column pr-0 pr-md-5 px-4 px-md-0">
                 <div class="menu_logo">
                     <a href=""><img loading="lazy" src="{{asset('frontend_assets/img/logo_white.png')}}" alt="experiencegift-box"></a>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="menu">
                     <ul id="menu-footer-menu-english-us" class="footermenulefta">
                         <li><a href="{{ route('home') }}" aria-current="page">Home</a></li>
-                        <li><a href="{{ route('our-hotels') }};">Our Hotels</a></li>   
+                        <li><a href="{{ route('our-hotels') }}">Our Hotels</a></li>   
                         <li><a href="{{ route('about-us') }}">About us</a></li>
                         <li><a href="{{ route('how-it-works') }}">How it works</a></li>
                         <li><a href="{{ route('our-package') }}">Our Package</a></li>

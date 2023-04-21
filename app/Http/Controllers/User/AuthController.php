@@ -64,7 +64,7 @@ class AuthController extends Controller
                   // update cart table with user id
                   Cart::where('user_id', $user->id)->delete();
                   Cart::where('session_id', Session::get('session_id'))->update(['user_id' => $user->id]);
-                return redirect()->route('cart');
+                return redirect()->route('home');
             } else {
                 Auth::logout();
                 return redirect()->back()->with('error', 'Email id & password was invalid!');

@@ -68,7 +68,7 @@
                             <div class="container">
                                 <div class="Logo">
                                     <a href="{{ route('home') }}" class="logo">
-                                        <img src="{{ asset('frontend_assets/img/logo.png') }}" alt="fmvacation">
+                                        <img src="{{ asset('frontend_assets/img/logo_white.png') }}" alt="fmvacation">
                                     </a>
                                 </div>
                             </div>
@@ -106,8 +106,9 @@
                                     @else
                                         <li class="menu-about"><a href="{{ route('login') }}">Login</a></li>
                                     @endif
-                                    <li class="menucart"><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i></a>    <div id="mini-cart-count">
-                                        {{ Helper::countCartPackage() }}    </div>
+                                    <li class="menucart"><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i>
+                                    <div id="mini-cart-count">
+                                        {{ Helper::countCartPackage() }}    </div></a>    
                                     </li>
 
                                 </ul>
@@ -208,7 +209,7 @@
                             <div class="container">
                                 <div class="Logo">
                                     <a href="{{ route('home') }}" class="logo">
-                                        <img src="{{ asset('frontend_assets/img/logo.png') }}" alt="fmvacation">
+                                        <img src="{{ asset('frontend_assets/img/logo_white.png') }}" alt="fmvacation">
                                     </a>
                                 </div>
                             </div>
@@ -245,8 +246,9 @@
                                 @else
                                     <li class="menu-about"><a href="{{ route('login') }}">Login</a></li>
                                 @endif
-                                <li class="menucart"><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i></a>    <div id="mini-cart-count">
-                                    {{ Helper::countCartPackage() }}    </div>
+                                <li class="menucart"><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i>
+                                <div id="mini-cart-count">
+                                    {{ Helper::countCartPackage() }}    </div></a>    
                                 </li>
 
                                 </ul>

@@ -22,7 +22,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
                     <a href="{{ route('orders.hold') }}" style="color: black">
                     <div class="card dash-widget">
                         <div class="card-body">
@@ -35,7 +35,7 @@
                     </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
                     <a href="{{ route('orders.index') }}" style="color: black">
                     <div class="card dash-widget">
                         <div class="card-body">
@@ -48,7 +48,7 @@
                     </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
                     <a href="" style="color: black">
                     <div class="card dash-widget">
                         <div class="card-body">
@@ -61,7 +61,7 @@
                     </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
                     <a href="{{ route('customers.index') }}" style="color: black">
                         <div class="card dash-widget">
                             <div class="card-body">
@@ -73,6 +73,45 @@
                             </div>
                         </div>
                     </a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                    <a href="{{ route('customers.index') }}" style="color: black">
+                        <div class="card dash-widget">
+                            <div class="card-body">
+                                <span class="dash-widget-icon"><i class="la la-reply"></i></span>
+                                <div class="dash-widget-info">
+                                    <h3>{{ $count['user'] }}</h3>
+                                    <span>Total call back </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                    <a href="{{ route('customers.index') }}" style="color: black">
+                        <div class="card dash-widget">
+                            <div class="card-body">
+                                <span class="dash-widget-icon"><i class="la la-envelope"></i></span>
+                                <div class="dash-widget-info">
+                                    <h3>{{ $count['user'] }}</h3>
+                                    <span>Total newsletter</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h4 class="mb-0">Total call back</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

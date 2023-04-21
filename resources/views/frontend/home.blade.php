@@ -294,90 +294,85 @@
             </div>
         </div>
     </section>
-    <!-- Modal -->
+   <!-- Modal -->
 <div class="modal fade" id="hotel_book_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content modal_bg_l">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Book Hotel</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="">
-              <form method="post" class="create-form" action="{{ route('book.hotel') }}">
-                  @csrf
-                  <div class="row">
-                      <div class="form-group col-md-6">
-                          <label for="">Name:</label>
-                          <input type="text" class="form-control" name="name" id="name" aria-describedby="" placeholder="">
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="">Email:</label>
-                          <input type="email" class="form-control" name="email" id="email" aria-describedby="" placeholder="">
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="">Phone Number:</label>
-                          <input type="texty" class="form-control" name="phone" id="phone" aria-describedby="" placeholder="">
-                      </div>
-                     
-                      <div class="form-group col-md-6">
-                          <label for="">Booking From:</label>
-                          <input type="date" class="form-control" name="booking_from" id="booking_from" aria-describedby="" placeholder="" min="{{date('Y-m-d')}}">
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="">Booking to:</label>
-                          <input type="date" class="form-control" name="booking_to" id="booking_to" aria-describedby="" placeholder="" min="{{date('Y-m-d')}}">
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="">Adults:</label>
-                          <input type="text" class="form-control" name="adults_number" id="" aria-describedby="" placeholder="">
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="">Location:</label>
-                          <input type="text" class="form-control" name="location" id="location" aria-describedby="" placeholder="">
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="">You have any voucher code?</label>
-                          <div class="d-flex">
-                              <div class="form-check pr-4">
-                                <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="yes">
-                                <label class="form-check-label" for="exampleRadios1">
-                                  Yes
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="no" checked>
-                                <label class="form-check-label" for="exampleRadios2">
-                                  No
-                                </label>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group col-md-6" >
-                          <div id="vocher">
-                              <label for="">Voucher Code :</label>
-                          <input type="text" class="form-control" name="voucher_code" id="voucher_code" aria-describedby="" placeholder="">
-                          </div>
-                      </div>
-                     
-                      
-                      
-                      
-                      
-                      
-                      <div class="form-group col-md-6">
-                          <button type="submit" class="btn btn-block btn-warning">Submit</button>
-                      </div>
-                  </div>
-              </form>
-          </div>
-        </div>
-       
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content modal_bg_l">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Book Hotel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="modal-body">
+        <div class="paddinng_modal">
+            <form method="post" class="create-form" action="{{ route('book.hotel') }}">
+                @csrf
+                <div class="row justify-content-center">
+                    <div class="form-group col-md-12">
+                        <label for="">Name:</label>
+                        <input type="text" class="form-control" name="name" id="name" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Email:</label>
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Phone Number:</label>
+                        <input type="texty" class="form-control" name="phone" id="phone" aria-describedby="" placeholder="">
+                    </div>
+                   
+                    <div class="form-group col-md-6">
+                        <label for="">Booking From:</label>
+                        <input type="date" class="form-control" name="booking_from" id="booking_from" aria-describedby="" placeholder="" min="{{date('Y-m-d')}}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Booking to:</label>
+                        <input type="date" class="form-control" name="booking_to" id="booking_to" aria-describedby="" placeholder="" min="{{date('Y-m-d')}}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Adults:</label>
+                        <input type="text" class="form-control" name="adults_number" id="" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Location:</label>
+                        <input type="text" class="form-control" name="location" id="location" aria-describedby="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">You have any voucher code?</label>
+                        <div class="d-flex">
+                            <div class="form-check pr-4">
+                              <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="yes">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="no" checked>
+                              <label class="form-check-label" for="exampleRadios2">
+                                No
+                              </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6" >
+                        <div id="vocher">
+                            <label for="">Voucher Code :</label>
+                        <input type="text" class="form-control" name="voucher_code" id="voucher_code" aria-describedby="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <button type="submit" class="btn btn-block btn-warning">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+     
     </div>
   </div>
+</div>
+
     <div loading="lazy" class="top__footer"></div>
 @endsection
 

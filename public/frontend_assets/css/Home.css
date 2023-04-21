@@ -2525,7 +2525,7 @@ span.step_count {
     border-width: 1px;
     border-style: solid;
     outline: 0 none;
-    background-color: #f7f7f8;
+    background-color: #d9d9d9;
     box-shadow: none !important;
   }
   .form-group:not(:only-child), .form-flex:not(:only-child) {

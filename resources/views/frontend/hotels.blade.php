@@ -3161,11 +3161,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="">
+        <div class="paddinng_modal">
             <form method="post" class="create-form" action="{{ route('book.hotel') }}">
                 @csrf
-                <div class="row">
-                    <div class="form-group col-md-6">
+                <div class="row justify-content-center">
+                    <div class="form-group col-md-12">
                         <label for="">Name:</label>
                         <input type="text" class="form-control" name="name" id="name" aria-describedby="" placeholder="">
                     </div>
@@ -3217,12 +3217,6 @@
                         <input type="text" class="form-control" name="voucher_code" id="voucher_code" aria-describedby="" placeholder="">
                         </div>
                     </div>
-                   
-                    
-                    
-                    
-                    
-                    
                     <div class="form-group col-md-6">
                         <button type="submit" class="btn btn-block btn-warning">Submit</button>
                     </div>

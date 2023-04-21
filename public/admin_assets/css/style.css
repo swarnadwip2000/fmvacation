@@ -2928,7 +2928,7 @@ input[type="file"].form-control {
     text-align: center;
     width: 230px;
     z-index: 1;
-    padding: 0 20px;
+    padding: 0 40px;
     -webkit-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -2943,6 +2943,7 @@ input[type="file"].form-control {
     .header .header-left {
         position: absolute;
         width: 100%;
+        padding: 0 30%
     }
 }
 
@@ -3385,7 +3386,7 @@ input[type="file"].form-control {
     color: #ebebeb;
     font-size: 14px;
     opacity: 1;
-    padding: 5px 15px;
+    padding: 15px 15px;
     white-space: nowrap;
 }
 
@@ -3412,7 +3413,7 @@ input[type="file"].form-control {
     -webkit-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    padding: 8px 15px;
+    padding: 11px 15px;
 }
 
 .sidebar .sidebar-menu ul li a:hover,
