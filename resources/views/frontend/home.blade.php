@@ -7,7 +7,7 @@
 @push('styles')
 <style>
     .error {
-        color: red;
+        color: red !important;
     }
 </style>
 @endpush
