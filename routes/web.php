@@ -15,6 +15,7 @@ use App\Http\Controllers\Frontend\BookController;
 use App\Http\Controllers\Frontend\CmsController;
 use App\Http\Controllers\User\AuthController as UserAuthController;
 use App\Http\Controllers\User\CartController;
+use App\Http\Controllers\User\ForgotPasswordController;
 use App\Http\Controllers\User\OrderController;
 use App\Http\Controllers\User\PackageController;
 use App\Http\Controllers\User\ProfileController as UserProfileController;
@@ -104,6 +105,11 @@ Route::get('register', [UserAuthController::class, 'register'])->name('register'
 Route::post('register-store', [UserAuthController::class, 'registerStore'])->name('register.store');
 Route::post('login-check', [UserAuthController::class, 'loginCheck'])->name('login.check');
 Route::get('logout', [UserAuthController::class, 'logout'])->name('logout');
+
+Route::get('/forget-password', [ForgotPasswordController::class, 'forgetPassword'])->name('forget.password'); // forget password
+Route::post('/forget-password-check', [ForgotPasswordController::class, 'forgetPasswordCheck'])->name('forget.password.check'); // forget password check
+Route::get('/reset-password/{id}/{token}', [ForgotPasswordController::class, 'resetPassword'])->name('reset.password'); // reset password
+Route::post('/reset-password-check', [ForgotPasswordController::class, 'resetPasswordCheck'])->name('reset.password.check'); // reset password check
 
 // home route
 Route::get('/', [CmsController::class, 'index'])->name('home');
