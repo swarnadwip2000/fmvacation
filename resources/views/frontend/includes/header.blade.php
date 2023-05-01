@@ -137,9 +137,9 @@
                 </p>
             </div>
         </div>
-        <div class="Giftboxes"><img alt="fmvacation" loading="lazy"
+        {{-- <div class="Giftboxes"><img alt="fmvacation" loading="lazy"
                 src="{{ asset('frontend_assets/img/GiftboxesHG.webp') }}">
-        </div>
+        </div> --}}
     </header>
 @else
     <header loading="lazy" class=""
