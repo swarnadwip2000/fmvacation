@@ -118,11 +118,11 @@
                 </div>
             </div>
             <div class="HeaderContent" style="margin-top: 36.4px;">
-                <h1>1 GIFT CARD FOR 550,000+ HOTELS WORLDWIDE</h1>
+                <h1>1 GIFT CARD FOR BEST HOTELS IN AUSTRALIA</h1>
                 <p>
                 </p>
                 <ul>
-                    <li>Redeem for 140+ hotel brands in over 170 countries</li>
+                    <li>Redeem for Best hotel brands in all over Austrelia</li>
                     <li>Personalize with a photo &amp; message</li>
                     <li>Free priority shipment of physical gift cards</li>
                     <li>Instant email of PDF and eGift</li>

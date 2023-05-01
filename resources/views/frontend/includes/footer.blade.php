@@ -88,9 +88,9 @@
                     <ul id="menu-footer-menu-english-us" class="footermenulefta">
                         <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
                         <li><a href="{{ route('terms-and-conditions') }}" aria-current="page">Terms and Conditions</a></li>
-                        <li><a href="{{ route('australia') }}">Austrelia</a></li>
-                        <li><a href="{{ route('aus-to-new-zealand') }}">Austrelia to Newzeland</a></li>
-                        <li><a href="{{ route('new-zealand-to-bali') }}">Newzeland to Bali</a></li>
+                        {{-- <li><a href="javascript:void(0);">Australia</a></li>
+                        <li><a href="javascript:void(0);">Australia to New Zealand</a></li>
+                        <li><a href="javascript:void(0);">New Zealand to Bali</a></li> --}}
                     </ul>
                     <!--<ul id="menu-footer-menu-b-english-us" class="footermenuleftb">-->
                         

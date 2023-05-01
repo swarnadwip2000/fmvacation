@@ -138,7 +138,7 @@
         </div>
     </div>
 </section>
-<section class="Section4 container">
+{{-- <section class="Section4 container">
     <div class="Titles">
         <h2>Happiness, guaranteed.</h2>
         <h3>Our helpful team is here to answer your questions.</h3>
@@ -152,7 +152,7 @@
             <div class="AuthorRole">Thalia</div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 <div loading="lazy" class="top__footer"></div>

@@ -92,7 +92,7 @@
 
 
 
-<section class="Section3 container" style="padding-top:0; margin-top:0">
+{{-- <section class="Section3 container" style="padding-top:0; margin-top:0">
     <div class="Title">
         <h2>Who we are</h2>
     </div>
@@ -131,7 +131,7 @@
         </div>
     </div>
     <div style="clear: both"></div>
-</section>
+</section> --}}
 <section class="Section4 container">
     <div class="Badge"><img src="https://www.hotelgift.com/wp-content/themes/appgift2/images/About/Badge.svg"></div>
     <div class="Title">
@@ -191,7 +191,7 @@
     </div>
 </section>
 
-<section class="Section7 container">
+{{-- <section class="Section7 container">
     <div class="Wrapper">
         <div class="Description">
             <div class="Title">
@@ -207,7 +207,7 @@
         </div>
         <div class="Image"><img src="https://www.hotelgift.com/wp-content/uploads/2021/04/sustainability-globe.jpg"></div>
     </div>
-</section>
+</section> --}}
 <div loading="lazy" class="top__footer"></div>
 @endsection
 

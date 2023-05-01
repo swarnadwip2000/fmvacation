@@ -32,16 +32,16 @@
                                         <h4 class="price">${{ $package['package_price'] }}</h4>
                                     </div>
                                     <ul class="features">
-                                        <li class="false">Complimentary breakfast</li>
-                                        <li class="false">Room Upgrades</li>
-                                        <li class="false">Late Checkouts</li>
                                         <li class="true">Experience certificates</li>
                                         <li class="true">Membership</li>
                                         <li class="true">Member exclusive rate</li>
-                                        <li class="false">No discount on renewals</li>
                                         <li class="true">Booking before 30days</li>
                                         <li class="true">Reward points 299 pts</li>
                                         <li class="true">Welcome benefits</li>
+                                        <li class="false">No discount on renewals</li>
+                                        <li class="false">Room Upgrades</li>
+                                        <li class="false">Complimentary breakfast</li>
+                                        <li class="false">Late Checkouts</li>
                                     </ul>
                                     <div class="btn-box">
                                         <a href="{{ route('package', encrypt($package['id'])) }}" class="theme-btn">BUY Package</a>
@@ -64,16 +64,16 @@
                                         <h4 class="price">${{ $package['package_price'] }}</h4>
                                     </div>
                                     <ul class="features">
-                                        <li class="true">Complimentary breakfast</li>
-                                        <li class="true">Room Upgrades</li>
-                                        <li class="true">Late Checkouts</li>
                                         <li class="true">Experience certificates</li>
                                         <li class="true">Membership</li>
                                         <li class="true">Member exclusive rate</li>
-                                        <li class="true">10% discount on renewals</li>
-                                        <li class="true">Booking before 45days</li>
-                                        <li class="true">Reward points 799 pts</li>
+                                        <li class="true">Booking before 30days</li>
+                                        <li class="true">Reward points 299 pts</li>
                                         <li class="true">Welcome benefits</li>
+                                        <li class="true">No discount on renewals</li>
+                                        <li class="true">Room Upgrades</li>
+                                        <li class="false">Complimentary breakfast</li>
+                                        <li class="false">Late Checkouts</li>
                                     </ul>
                                     <div class="btn-box">
                                         <a href="{{ route('package', encrypt($package['id'])) }}" class="theme-btn">BUY Package</a>
@@ -96,16 +96,16 @@
                                         <h4 class="price">${{ $package['package_price'] }}</h4>
                                     </div>
                                     <ul class="features">
-                                        <li class="false">Complimentary breakfast</li>
-                                        <li class="true">Room Upgrades</li>
-                                        <li class="false">Late Checkouts</li>
                                         <li class="true">Experience certificates</li>
                                         <li class="true">Membership</li>
                                         <li class="true">Member exclusive rate</li>
-                                        <li class="true">5% discount on renewals</li>
-                                        <li class="true">Booking before 35days</li>
-                                        <li class="true">Reward points 499 pts</li>
+                                        <li class="true">Booking before 30days</li>
+                                        <li class="true">Reward points 299 pts</li>
                                         <li class="true">Welcome benefits</li>
+                                        <li class="true">No discount on renewals</li>
+                                        <li class="true">Room Upgrades</li>
+                                        <li class="true">Complimentary breakfast</li>
+                                        <li class="true">Late Checkouts</li>
                                     </ul>
                                     <div class="btn-box">
                                         <a href="{{ route('package', encrypt($package['id'])) }}" class="theme-btn">BUY Package</a>
@@ -164,7 +164,7 @@
                                         <i class="ph-file-text"></i>
                                     </span>
                                     <h4>Redeem </h4>
-                                    <p>Visit your chosen hotel & redeem your voucher to save more during your stay. </p>
+                                    <p>Contact us for the redemption of the voucher prior based on the voucher you have taken. For more info, look into Redemption Policy. </p>
                                 </div>
                             </div>
                         </li>

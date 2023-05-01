@@ -26,16 +26,29 @@
                                 <h4 class="price">${{ $package['package_price'] }}</h4>
                             </div>
                             <ul class="features">
-                                <li class="false">Complimentary breakfast</li>
-                                <li class="false">Room Upgrades</li>
-                                <li class="false">Late Checkouts</li>
                                 <li class="true">Experience certificates</li>
                                 <li class="true">Membership</li>
                                 <li class="true">Member exclusive rate</li>
-                                <li class="false">No discount on renewals</li>
                                 <li class="true">Booking before 30days</li>
                                 <li class="true">Reward points 299 pts</li>
                                 <li class="true">Welcome benefits</li>
+                                @if($package['package_name'] == 'Silver')
+                                <li class="false">No discount on renewals</li>
+                                <li class="false">Room Upgrades</li>
+                                <li class="false">Complimentary breakfast</li>
+                                <li class="false">Late Checkouts</li>
+                                @elseif($package['package_name'] == 'Gold')
+                                <li class="true">No discount on renewals</li>
+                                <li class="true">Room Upgrades</li>
+                                <li class="false">Complimentary breakfast</li>
+                                <li class="false">Late Checkouts</li>
+                                @else
+                                <li class="true">No discount on renewals</li>
+                                <li class="true">Room Upgrades</li>
+                                <li class="true">Complimentary breakfast</li>
+                                <li class="true">Late Checkouts</li>
+                                @endif
+
                             </ul>
                         </div>
                     </div>
