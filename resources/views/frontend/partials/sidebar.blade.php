@@ -4,8 +4,11 @@
 <div class="col-md-3">
     <div class="position-relative dashboard_left">
       <div class="d-flex align-items-center justify-content-start pb-3">
+        @php
+            $first_char = mb_substr(Auth::user()->full_name, 0, 1); 
+        @endphp
         <div class="img_image">
-          <img src="{{ asset('frontend_assets/img/thalia.jpg') }}"/>
+          <h2>{{ $first_char  }}</h2>
         </div>
         <div class="name_price">
           <h5>{{ Auth::user()->full_name }}</h5>
