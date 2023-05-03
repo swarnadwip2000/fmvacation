@@ -122,7 +122,7 @@
                 <p>
                 </p>
                 <ul>
-                    <li>Redeem for Best hotel brands in all over Austrelia</li>
+                    <li>Redeem for Best hotel brands in all over Australia</li>
                     <li>Personalize with a photo &amp; message</li>
                     <li>Free priority shipment of physical gift cards</li>
                     <li>Instant email of PDF and eGift</li>
@@ -261,7 +261,7 @@
                 <h1>{{ Request::is('package/*') ? 'Package' : '' }}{{ Request::is('how-it-works') ? 'How it works' : '' }}{{ Request::is('about-us') ? 'About Us' : '' }}
                     {{ Request::is('our-package') ? 'Our Package' : '' }}{{ Request::is('cart') ? 'My Cart' : '' }}
                     {{ Request::is('checkout') ? 'Checkout' : '' }} {{ Request::is('profile') || Request::is('orders') || Request::is('change-password') ? 'My profile' : '' }}{{ Request::is('our-hotels') ? 'Our Hotels' : '' }}{{ Request::is('cart/*') ? 'Cart' : '' }}{{ Request::is('checkout/*') ? 'Checkout' : '' }}
-                    {{ Request::is('new-zealand-to-bali') ? 'Newzeland to Bali' : '' }}{{ Request::is('aus-to-new-zealand') ? 'Austrelia to Newzeland' : '' }}{{ Request::is('australia') ? 'Austrelia' : '' }}
+                    {{ Request::is('new-zealand-to-bali') ? 'Newzeland to Bali' : '' }}{{ Request::is('aus-to-new-zealand') ? 'Australia to Newzeland' : '' }}{{ Request::is('australia') ? 'Australia' : '' }}
                 </h1>
                 <p></p>
             </div>

@@ -184,7 +184,8 @@
                                         <i class="ph-file-text"></i>
                                     </span>
                                     <h4>Redeem </h4>
-                                    <p>Contact us for the redemption of the voucher prior based on the voucher you have taken. For more info, look into Redemption Policy. </p>
+                                    <p>Contact us for the redemption of the voucher prior based on the voucher you have
+                                        taken. For more info, look into Redemption Policy. </p>
                                 </div>
                             </div>
                         </li>
@@ -209,7 +210,7 @@
                     <div class="Icon"><img alt="FM Vacation" loading="lazy"
                             src="{{ asset('frontend_assets/img/FactsDelivery_HG.svg') }}">
                     </div>
-                    <div class="Title">Free priority shipment all accross Austrelia</div>
+                    <div class="Title">Free priority shipment all accross Australia</div>
                     <div class="SubTitle">&amp; instant shipment of eGifts</div>
                 </div>
                 <div class="Fact">
