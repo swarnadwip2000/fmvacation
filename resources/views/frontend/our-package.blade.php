@@ -67,10 +67,10 @@
                                         <li class="true">Experience certificates</li>
                                         <li class="true">Membership</li>
                                         <li class="true">Member exclusive rate</li>
-                                        <li class="true">Booking before 30days</li>
-                                        <li class="true">Reward points 299 pts</li>
+                                        <li class="true">Booking before 35days</li>
+                                        <li class="true">Reward points 499 pts</li>
                                         <li class="true">Welcome benefits</li>
-                                        <li class="true">No discount on renewals</li>
+                                        <li class="true">5% discount on renewals</li>
                                         <li class="true">Room Upgrades</li>
                                         <li class="false">Complimentary breakfast</li>
                                         <li class="false">Late Checkouts</li>
@@ -99,10 +99,10 @@
                                         <li class="true">Experience certificates</li>
                                         <li class="true">Membership</li>
                                         <li class="true">Member exclusive rate</li>
-                                        <li class="true">Booking before 30days</li>
-                                        <li class="true">Reward points 299 pts</li>
+                                        <li class="true">Booking before 45days</li>
+                                        <li class="true">Reward points 799 pts</li>
                                         <li class="true">Welcome benefits</li>
-                                        <li class="true">No discount on renewals</li>
+                                        <li class="true">10% discount on renewals</li>
                                         <li class="true">Room Upgrades</li>
                                         <li class="true">Complimentary breakfast</li>
                                         <li class="true">Late Checkouts</li>

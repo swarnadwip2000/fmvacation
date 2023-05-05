@@ -2,7 +2,7 @@
 @section('meta')
 @endsection
 @section('title')
-    {{ env('APP_NAME') }} |  Package
+    {{ env('APP_NAME') }} | Package
 @endsection
 @push('styles')
 @endpush
@@ -26,27 +26,39 @@
                                 <h4 class="price">${{ $package['package_price'] }}</h4>
                             </div>
                             <ul class="features">
-                                <li class="true">Experience certificates</li>
-                                <li class="true">Membership</li>
-                                <li class="true">Member exclusive rate</li>
-                                <li class="true">Booking before 30days</li>
-                                <li class="true">Reward points 299 pts</li>
-                                <li class="true">Welcome benefits</li>
-                                @if($package['package_name'] == 'Silver')
-                                <li class="false">No discount on renewals</li>
-                                <li class="false">Room Upgrades</li>
-                                <li class="false">Complimentary breakfast</li>
-                                <li class="false">Late Checkouts</li>
+                                @if ($package['package_name'] == 'Silver')
+                                    <li class="true">Experience certificates</li>
+                                    <li class="true">Membership</li>
+                                    <li class="true">Member exclusive rate</li>
+                                    <li class="true">Booking before 30days</li>
+                                    <li class="true">Reward points 299 pts</li>
+                                    <li class="true">Welcome benefits</li>
+                                    <li class="false">No discount on renewals</li>
+                                    <li class="false">Room Upgrades</li>
+                                    <li class="false">Complimentary breakfast</li>
+                                    <li class="false">Late Checkouts</li>
                                 @elseif($package['package_name'] == 'Gold')
-                                <li class="true">No discount on renewals</li>
-                                <li class="true">Room Upgrades</li>
-                                <li class="false">Complimentary breakfast</li>
-                                <li class="false">Late Checkouts</li>
+                                    <li class="true">Experience certificates</li>
+                                    <li class="true">Membership</li>
+                                    <li class="true">Member exclusive rate</li>
+                                    <li class="true">Booking before 35days</li>
+                                    <li class="true">Reward points 499 pts</li>
+                                    <li class="true">Welcome benefits</li>
+                                    <li class="true">5% discount on renewals</li>
+                                    <li class="true">Room Upgrades</li>
+                                    <li class="false">Complimentary breakfast</li>
+                                    <li class="false">Late Checkouts</li>
                                 @else
-                                <li class="true">No discount on renewals</li>
-                                <li class="true">Room Upgrades</li>
-                                <li class="true">Complimentary breakfast</li>
-                                <li class="true">Late Checkouts</li>
+                                    <li class="true">Experience certificates</li>
+                                    <li class="true">Membership</li>
+                                    <li class="true">Member exclusive rate</li>
+                                    <li class="true">Booking before 45days</li>
+                                    <li class="true">Reward points 799 pts</li>
+                                    <li class="true">Welcome benefits</li>
+                                    <li class="true">10% discount on renewals</li>
+                                    <li class="true">Room Upgrades</li>
+                                    <li class="true">Complimentary breakfast</li>
+                                    <li class="true">Late Checkouts</li>
                                 @endif
 
                             </ul>
@@ -55,26 +67,25 @@
                     <div class="pricing-block col-lg-8 col-md-8 col-sm-12 wow fadeInUp">
                         <div class="price_rightbox">
                             <form class="cart" action="{{ route('add-to-cart') }}" method="post" enctype="">
-                                @csrf                   
-                                <input type="hidden" name="package_id" value="{{ $package['id'] }}">        
+                                @csrf
+                                <input type="hidden" name="package_id" value="{{ $package['id'] }}">
                                 <div class="wps_wgm_added_wrapper">
                                     <div class="form-group">
                                         <label class="wps_wgc_label">From</label>
                                         <input type="text" name="send_from" id="wps_wgm_from_name"
-                                            class="wps_wgm_from_name form-control" placeholder="Enter the sender email" value="@if(Auth::check() && Auth::user()->hasRole('USER')) {{ Auth::user()->email }} @else {{ old('send_from') }} @endif">
-                                            @if ($errors->has('send_from'))
+                                            class="wps_wgm_from_name form-control" placeholder="Enter the sender email"
+                                            value="@if (Auth::check() && Auth::user()->hasRole('USER')) {{ Auth::user()->email }} @else {{ old('send_from') }} @endif">
+                                        @if ($errors->has('send_from'))
                                             <div class="error" style="color:red;">{{ $errors->first('send_from') }}
                                             </div>
-                                                
-                                            @endif
+                                        @endif
                                     </div>
                                     <div class="form-group">
                                         <label class="wps_wgc_label">Gift Message </label>
                                         <textarea name="send_message" id="wps_wgm_message" class="wps_wgm_message form-control">{{ old('send_message') }}</textarea>
                                         @if ($errors->has('send_message'))
-                                        <div class="error" style="color:red;">{{ $errors->first('send_message') }}
-                                        </div>
-                                            
+                                            <div class="error" style="color:red;">{{ $errors->first('send_message') }}
+                                            </div>
                                         @endif
                                     </div>
                                     <div class="wps_wgm_section wps_delivery_method">
@@ -90,15 +101,16 @@
                                                 <span class="wps_wgm_msg_info">We will send it to the recipient's email
                                                     address</span>
                                                 @if ($errors->has('send_to'))
-                                                <div class="error" style="color:red;">{{ $errors->first('send_to') }}
-                                                </div>
+                                                    <div class="error" style="color:red;">{{ $errors->first('send_to') }}
+                                                    </div>
                                                 @endif
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="btn-box text-left">
-                                    <button type="submit" name="add-to-cart" style="background-color:#fd3103" class="btn" class="theme-btn">Purchase Now</button>
+                                    <button type="submit" name="add-to-cart" style="background-color:#fd3103"
+                                        class="btn" class="theme-btn">Purchase Now</button>
                                 </div>
 
                             </form>
